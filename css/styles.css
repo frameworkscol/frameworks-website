@@ -1249,3 +1249,7 @@ img.crm__brand { display: block; height: 1.35cqw; width: auto; }
 .dev__code { white-space: normal; }
 .site__grid img { aspect-ratio: auto; height: 19cqw; }
 .dev.is-scroll .site { transform: translateY(-24cqw); }
+/* Logo del encabezado al tamaño de referencia (≈ 260 px de ancho en escritorio) */
+.logo__img { height: 35px; }
+@media (max-width: 1180px) { .logo__img { height: 29px; } }
+@media (max-width: 900px) { .logo__img { height: 22px; } }
