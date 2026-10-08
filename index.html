@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="es-419">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Frame Works · Marketing digital, sitios web e IA para negocios</title>
+  <meta name="description" content="Marketing digital, sitios web e inteligencia artificial para que tu negocio atraiga más clientes y trabaje con menos tareas manuales. Agenda una llamada gratis de 30 minutos.">
+  <meta name="theme-color" content="#F4F0E8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Frame Works">
+  <meta property="og:description" content="Más clientes. Menos trabajo manual. Marketing digital, sitios web e IA para negocios.">
+  <meta property="og:locale" content="es_LA">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..500&display=swap">
+  <link rel="stylesheet" href="css/styles.css?v=20261012b">
+  <script>
+    // Activa la animación de entrada del logo (se omite si el visitante prefiere menos movimiento)
+    // Al recargar, empezar siempre desde arriba (sin restaurar scroll ni saltar a #secciones)
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    (function (d) {
+      d.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('intro-playing');
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__logo"><span class="intro__line"><span class="intro__frame">Frame</span></span><span class="intro__line"><span class="intro__works">Works</span><span class="intro__dot">.</span></span></div>
+</div>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<a class="float-cta" id="floatCta" href="#contacto" data-whatsapp="">
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.6 3.7c-.5.4-1.4.1-1.4-.6V16.5A2.5 2.5 0 0 1 4 14V5.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 8.5h8M8 11.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  <span>Escríbenos</span>
+</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="container header__in">
+    <a class="logo" href="#top" aria-label="Frame Works, inicio"><img class="logo__img" src="assets/img/logo/logo-una-linea.png" alt="Frame Works." width="846" height="114"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#casos">Casos</a>
+      <a href="#metodo">Método</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+    <a class="btn btn--small btn--pill header__cta" href="#contacto"><span>Cotización gratis</span></a>
+    <div class="lang" role="group" aria-label="Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav"><span class="menu-btn__label">Menú</span><span class="menu-btn__icon" aria-hidden="true"></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" hidden>
+  <nav class="container mobile-nav__in" aria-label="Menú para celular">
+    <a href="#servicios">Servicios</a>
+    <a href="#casos">Casos</a>
+    <a href="#metodo">Método</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__media" data-anim>
+    <figure class="mac" id="heroMac" aria-label="Demostración interactiva de una automatización">
+      <div class="mac__float">
+      <div class="mac__lid">
+        <span class="mac__cam" aria-hidden="true"></span>
+        <div class="mac__screen">
+          <div class="demo" id="demo" aria-hidden="true">
+            <div class="demo__cam" id="demoCam">
+              <div class="demo__grid"></div>
+
+              <svg class="demo__links" viewBox="0 0 100 62.5" preserveAspectRatio="none">
+                <path class="demo__l" id="dl1" pathLength="1" d="M33 30 L38.5 30"/>
+                <path class="demo__l" id="dl2" pathLength="1" d="M61.5 30 L65 30"/>
+                <path class="demo__l demo__l--back" id="dl3" pathLength="1" d="M81.5 51 C81.5 60 18 60 18 51"/>
+                <circle class="demo__pulse" id="dPulse" r=".75" cx="-10" cy="-10"/>
+              </svg>
+              <span class="demo__port" style="left:33cqw;top:30cqw"></span>
+              <span class="demo__port" style="left:38.5cqw;top:30cqw"></span>
+              <span class="demo__port" style="left:61.5cqw;top:30cqw"></span>
+              <span class="demo__port" style="left:65cqw;top:30cqw"></span>
+              <span class="demo__backtag" id="dBackTag">Respuesta automática</span>
+
+              <!-- WhatsApp Business -->
+              <div class="wa" id="dWa">
+                <div class="wa__head">
+                  <img class="wa__av" src="assets/img/demo-santiago.jpg" alt="" width="80" height="80">
+                  <span class="wa__who"><b>Santiago Montenegro</b><small id="dWaSub">en línea</small></span>
+                  <span class="wa__logo"><svg viewBox="0 0 24 24"><path d="M4.5 20 5.7 16.3A8.2 8.2 0 1 1 8.2 18.8Z"/><path d="M9.3 8.6c-.2 2.6 3 6.1 5.9 6.2l1.1-1.4-1.9-1-1 .8c-1-.4-2.2-1.6-2.6-2.6l.8-1-1-1.9Z"/></svg></span>
+                </div>
+                <div class="wa__body">
+                  <div class="wa__msgs" id="dMsgs">
+                    <span class="wa__day">Hoy</span>
+                    <span class="wa__unread" id="dUnread">1 mensaje no leído</span>
+                    <div class="wa__b wa__b--in" id="dIn">Hola, quisiera cotizar unas ventanas para mi proyecto.<i class="wa__t">10:24</i></div>
+                    <div class="wa__auto" id="dAutoTag"><span class="demo__bolt"></span>Respuesta automática</div>
+                    <div class="wa__typing" id="dTyping"><i></i><i></i><i></i></div>
+                    <div class="wa__b wa__b--out" id="dOut">¡Hola, Santiago! 👋 Claro, podemos ayudarte con la cotización. Cuéntanos las medidas aproximadas de tu proyecto y te ayudamos a continuar.<i class="wa__t">10:24 <span class="wa__ticks" id="dTicks">✓✓</span></i></div>
+                  </div>
+                </div>
+                <div class="wa__input"><span>Escribe un mensaje</span><i></i></div>
+              </div>
+
+              <!-- Captura del lead -->
+              <div class="cap" id="dCap">
+                <div class="cap__head"><span class="demo__bolt demo__bolt--lg"></span><span><b>Captura de lead</b><small>Automático</small></span></div>
+                <dl class="cap__rows">
+                  <div><dt>Nombre</dt><dd data-v="Santiago Montenegro"></dd></div>
+                  <div><dt>Canal</dt><dd data-v="WhatsApp"></dd></div>
+                  <div><dt>Interés</dt><dd data-v="Ventanas"></dd></div>
+                  <div><dt>Estado</dt><dd data-v="Nuevo" data-badge></dd></div>
+                </dl>
+              </div>
+
+              <!-- CRM -->
+              <div class="crm" id="dCrm">
+                <div class="crm__top"><img class="crm__brand" src="assets/img/logo/logo-una-linea.png" alt="Frame Works." width="846" height="114"><span class="crm__search"></span><span class="crm__me">FW</span></div>
+                <div class="crm__title"><b>Leads</b><span class="crm__count" id="dCount">24</span></div>
+                <div class="crm__head"><span>Contacto</span><span>Canal</span><span>Estado</span></div>
+                <div class="crm__rows">
+                  <div class="crm__new" id="dRow">
+                    <div class="crm__row crm__row--new">
+                      <span class="crm__c"><img class="crm__av" src="assets/img/demo-santiago.jpg" alt="" width="80" height="80"><span><b>Santiago Montenegro</b><small><em class="crm__tag">Ventanas</em><span class="crm__when">Ahora</span></small></span></span>
+                      <span class="crm__ch"><span class="crm__wa"><svg viewBox="0 0 24 24"><path d="M4.5 20 5.7 16.3A8.2 8.2 0 1 1 8.2 18.8Z"/><path d="M9.3 8.6c-.2 2.6 3 6.1 5.9 6.2l1.1-1.4-1.9-1-1 .8c-1-.4-2.2-1.6-2.6-2.6l.8-1-1-1.9Z"/></svg></span>WhatsApp</span>
+                      <span class="crm__st"><span class="crm__badge" id="dBadge" data-s="new">Nuevo</span><em class="crm__tag crm__tag--hot" id="dPrio">Prioridad alta</em></span>
+                      <span class="crm__prog" id="dProg"></span>
+                    </div>
+                  </div>
+                  <div class="crm__row"><span class="crm__c"><span class="crm__av">AT</span><span><b>Ana Torres</b><small><em class="crm__tag">Cocina</em><span class="crm__when">Hace 2 h</span></small></span></span><span class="crm__ch">Sitio web</span><span class="crm__st"><span class="crm__badge" data-s="ok">Calificado</span></span></div>
+                  <div class="crm__row"><span class="crm__c"><img class="crm__av" src="assets/img/demo-ryan.jpg" alt="" width="80" height="80"><span><b>Ryan Mitchell</b><small><em class="crm__tag">Puertas</em><span class="crm__when">Ayer</span></small></span></span><span class="crm__ch">Instagram</span><span class="crm__st"><span class="crm__badge" data-s="follow">En seguimiento</span></span></div>
+                  <div class="crm__row"><span class="crm__c"><span class="crm__av">MR</span><span><b>Marta Ríos</b><small><em class="crm__tag">Ventanas</em><span class="crm__when">Ayer</span></small></span></span><span class="crm__ch">Formulario</span><span class="crm__st"><span class="crm__badge" data-s="done">Cotizado</span></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Marketing: 3 anuncios de marcas ficticias (NOIR: imagen creada con IA FLUX; VOLT y AURA: fotos Unsplash), animados con CSS -->
+            <div class="mkt" id="dMkt">
+              <div class="mkt__head"><span class="mkt__kicker">Marketing de contenido</span><b>Contenido que detiene el scroll</b></div>
+              <div class="mkt__reels">
+                <figure class="reel reel--noir">
+                  <div class="reel__frame">
+                    <div class="reel__media"><img src="assets/img/ads/noir.jpg" alt="" width="576" height="1024" loading="lazy"></div>
+                    <span class="reel__sweep"></span>
+                    <span class="cin__top cin__gold">Eau de parfum</span>
+                    <span class="cin__claim cin__claim--noir"><b>La noche</b><b>te pertenece.</b></span>
+                    <span class="cin__grain"></span>
+                    <span class="reel__bar"><i></i></span>
+                  </div>
+                  <figcaption>Comercial de lujo</figcaption>
+                </figure>
+                <figure class="reel reel--volt">
+                  <div class="reel__frame">
+                    <div class="reel__media"><img src="assets/img/ads/volt.jpg" alt="" width="576" height="1024" loading="lazy"></div>
+                    <span class="cin__speed"></span>
+                    <span class="cin__volt">VOLT</span>
+                    <span class="cin__claim"><b>Ligero. Rápido. Tuyo.</b><span class="cin__chip">Nuevo drop · 11.11</span></span>
+                    <span class="cin__grain"></span>
+                    <span class="reel__bar"><i></i></span>
+                  </div>
+                  <figcaption>Lanzamiento de producto</figcaption>
+                </figure>
+                <figure class="reel reel--aura">
+                  <div class="reel__frame">
+                    <div class="reel__media"><img src="assets/img/ads/aura.jpg" alt="" width="576" height="1024" loading="lazy"></div>
+                    <span class="cin__ring"></span>
+                    <span class="cin__top cin__dark">AURA · Sérum</span>
+                    <span class="cin__claim cin__claim--aura"><b>Hidratación</b><b>que se nota.</b></span>
+                    <span class="cin__grain"></span>
+                    <span class="reel__bar"><i></i></span>
+                  </div>
+                  <figcaption>Belleza y cuidado</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Desarrollo web: código que se escribe y la página que resulta (estudio ficticio ARCA) -->
+            <div class="dev" id="dDev">
+              <div class="dev__ide" id="dIde">
+                <div class="dev__bar"><span class="dev__dots"><i></i><i></i><i></i></span><span class="dev__tab is-on" id="dTabHtml">index.html</span><span class="dev__tab" id="dTabJs">main.js</span><span class="dev__run" id="dRun">▶ Publicar</span></div>
+                <pre class="dev__code dev__code--html"><span class="ln" style="--n:34;--d:300ms"><em>1</em><span class="ln__t"><span class="c-com">&lt;!-- ARCA Arquitectos · inicio --&gt;</span></span></span>
+<span class="ln" style="--n:20;--d:666ms"><em>2</em><span class="ln__t">&lt;<span class="c-tag">header</span> <span class="c-att">class</span>=<span class="c-str">&quot;nav&quot;</span>&gt;</span></span>
+<span class="ln" style="--n:35;--d:906ms"><em>3</em><span class="ln__t">  &lt;<span class="c-tag">a</span> <span class="c-att">class</span>=<span class="c-str">&quot;logo&quot;</span> <span class="c-att">href</span>=<span class="c-str">&quot;/&quot;</span>&gt;ARCA&lt;<span class="c-tag">/a</span>&gt;</span></span>
+<span class="ln" style="--n:43;--d:1281ms"><em>4</em><span class="ln__t">  &lt;<span class="c-tag">nav</span>&gt;Proyectos · Estudio · Contacto&lt;<span class="c-tag">/nav</span>&gt;</span></span>
+<span class="ln" style="--n:9;--d:1728ms"><em>5</em><span class="ln__t">&lt;<span class="c-tag">/header</span>&gt;</span></span>
+<span class="ln" style="--n:22;--d:1869ms"><em>6</em><span class="ln__t">&lt;<span class="c-tag">section</span> <span class="c-att">class</span>=<span class="c-str">&quot;hero&quot;</span>&gt;</span></span>
+<span class="ln" style="--n:49;--d:2127ms"><em>7</em><span class="ln__t">  &lt;<span class="c-tag">img</span> <span class="c-att">src</span>=<span class="c-str">&quot;casa-mirador.jpg&quot;</span> <span class="c-att">alt</span>=<span class="c-str">&quot;Casa Mirador&quot;</span>&gt;</span></span>
+<span class="ln" style="--n:33;--d:2628ms"><em>8</em><span class="ln__t">  &lt;<span class="c-tag">h1</span>&gt;Espacios que respiran.&lt;<span class="c-tag">/h1</span>&gt;</span></span>
+<span class="ln" style="--n:52;--d:2985ms"><em>9</em><span class="ln__t">  &lt;<span class="c-tag">a</span> <span class="c-att">class</span>=<span class="c-str">&quot;btn&quot;</span> <span class="c-att">href</span>=<span class="c-str">&quot;#proyectos&quot;</span>&gt;Ver proyectos&lt;<span class="c-tag">/a</span>&gt;</span></span>
+<span class="ln" style="--n:10;--d:3513ms"><em>10</em><span class="ln__t">&lt;<span class="c-tag">/section</span>&gt;</span></span></pre>
+                <pre class="dev__code dev__code--js"><span class="ln" style="--n:31;--d:200ms"><em>1</em><span class="ln__t"><span class="c-com">// Parallax suave en la portada</span></span></span>
+<span class="ln" style="--n:45;--d:539ms"><em>2</em><span class="ln__t"><span class="c-key">const</span> hero = <span class="c-key">document</span>.<span class="c-fn">querySelector</span>(<span class="c-str">&#x27;.hero&#x27;</span>);</span></span>
+<span class="ln" style="--n:41;--d:1004ms"><em>3</em><span class="ln__t"><span class="c-key">window</span>.<span class="c-fn">addEventListener</span>(<span class="c-str">&#x27;scroll&#x27;</span>, () =&gt; {</span></span>
+<span class="ln" style="--n:57;--d:1433ms"><em>4</em><span class="ln__t">  hero.style.transform = <span class="c-str">`translateY(${scrollY * .3}px)`</span>;</span></span>
+<span class="ln" style="--n:3;--d:2006ms"><em>5</em><span class="ln__t">});</span></span>
+<span class="ln" style="--n:38;--d:2093ms"><em>6</em><span class="ln__t"><span class="c-fn">reveal</span>(<span class="c-str">&#x27;.proyecto&#x27;</span>, { stagger: 120 });</span></span></pre>
+              </div>
+              <div class="dev__browser" id="dBrowser">
+                <div class="dev__url"><span class="dev__dots"><i></i><i></i><i></i></span><span class="dev__addr">arca-arquitectos.com</span><span class="dev__load" id="dLoad"></span></div>
+                <div class="dev__view">
+                  <div class="site" id="dSite">
+                    <div class="site__nav"><b>ARCA</b><span>Proyectos</span><span>Estudio</span><span>Contacto</span></div>
+                    <div class="site__hero"><img src="assets/img/arca/arca-hero.jpg" alt="" width="1100" height="620" loading="lazy"><div class="site__copy"><small>Arquitectura residencial</small><b>Espacios que respiran.</b><span class="site__btn">Ver proyectos</span></div></div>
+                    <div class="site__sec"><small>Proyectos recientes</small>
+                      <div class="site__grid">
+                        <figure><img src="assets/img/arca/arca-1.jpg" alt="" width="420" height="300" loading="lazy"><figcaption>Casa Espejo</figcaption></figure>
+                        <figure><img src="assets/img/arca/arca-2.jpg" alt="" width="420" height="300" loading="lazy"><figcaption>Casa Duna</figcaption></figure>
+                        <figure><img src="assets/img/arca/arca-3.jpg" alt="" width="420" height="300" loading="lazy"><figcaption>Interior Alba</figcaption></figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mac__brand" aria-hidden="true">
+              <div class="mb mb--img"><span class="mb__line"><img class="mb__frame" src="assets/img/logo/logo-frame.png" alt="" width="748" height="198"></span><span class="mb__line mb__line--w"><img class="mb__works" src="assets/img/logo/logo-works.png" alt="" width="748" height="202"><img class="mb__dot" src="assets/img/logo/logo-dot.png" alt="" width="748" height="202"></span></div>
+            </div>
+            <div class="demo__hud" id="dHud">
+              <span class="demo__live"><i></i><span id="dStep">Mensaje recibido</span></span>
+              <span class="demo__steps"><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mac__base" aria-hidden="true"></div>
+      </div>
+      <div class="mac__shadow" aria-hidden="true"></div>
+    </figure>
+  </div>
+  <div class="container hero__in">
+    <h1 class="hero__title">
+      <span class="line"><span>Construyendo soluciones</span></span>
+      <span class="line"><span>digitales para tu empresa<i class="dot">.</i></span></span>
+    </h1>
+    <p class="eyebrow hero__kicker" data-anim>Marketing digital · Sitios web · IA y automatización</p>
+    <div class="hero__body" data-anim>
+      <ul class="hero__offer" aria-label="Qué ofrecemos">
+        <li><a href="#servicios">Digital Presence</a></li>
+        <li><a href="#servicios">Web &amp; Digital Experiences</a></li>
+        <li><a href="#servicios">AI &amp; Automation</a></li>
+        <li><a href="#servicios">Business Tools</a></li>
+      </ul>
+      <div class="hero__ctas">
+        <a class="btn btn--pill" href="#contacto"><span>Solicita tu cotización gratis</span><span class="arr" aria-hidden="true">→</span></a>
+        <a class="link-plain" href="#servicios">Ver servicios</a>
+      </div>
+      <p class="hero__trust"><span>30 minutos</span><span>Sin costo</span><span>Sin compromiso</span></p>
+      <!-- SELLO DE ALIANZA: quitar "hidden" y poner la imagen del sello (p. ej. Meta Business Partner) -->
+      <div class="badge" hidden><!-- <img src="assets/img/sello-alianza.svg" alt="Nombre de la certificación" height="40"> --></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="band" aria-label="Sectores con los que trabajamos">
+  <div class="band__track">
+    <ul class="band__list">
+      <li>Panaderías</li><li>Distribuidoras</li><li>Clínicas</li><li>Tiendas en línea</li><li>Talleres</li><li>Firmas profesionales</li><li>Restaurantes</li><li>Comercio local</li>
+    </ul>
+    <ul class="band__list" aria-hidden="true">
+      <li>Panaderías</li><li>Distribuidoras</li><li>Clínicas</li><li>Tiendas en línea</li><li>Talleres</li><li>Firmas profesionales</li><li>Restaurantes</li><li>Comercio local</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="section section--dark" id="problema">
+  <div class="container grid">
+    <p class="eyebrow col-label" data-reveal>El punto de partida</p>
+    <h2 data-split class="h-xl col-main" data-reveal>Tu negocio no necesita más herramientas. Necesita menos caos<i class="dot">.</i></h2>
+    <ul class="symptoms col-wide">
+      <li data-reveal><span class="symptoms__k">Invisibilidad</span><p>Publicas cuando puedes y tus redes no te traen clientes.</p></li>
+      <li data-reveal><span class="symptoms__k">Web que no vende</span><p>No tienes sitio web, o lo tienes y nadie te contacta por ahí.</p></li>
+      <li data-reveal><span class="symptoms__k">Repetición</span><p>Respondes las mismas preguntas y haces las mismas tareas a mano.</p></li>
+      <li data-reveal><span class="symptoms__k">Desorden</span><p>Clientes y datos repartidos entre WhatsApp, correos y hojas de cálculo.</p></li>
+    </ul>
+    <p class="lead col-text problem__close" data-reveal>Lo resolvemos contigo, por partes y empezando por lo que más impacto tiene en tus ventas.</p>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section section--lino" id="servicios">
+  <div class="container grid services-wrap">
+    <p class="eyebrow col-label" data-reveal>Servicios</p>
+    <div class="services-head col-wide">
+      <h2 data-split class="h-lg" data-reveal>Qué hacemos</h2>
+    </div>
+    <ul class="services col-wide" data-stagger>
+      <li class="service is-active">
+        <h3 class="service__h">
+          <button class="service__head" type="button" id="svc-1-btn" aria-expanded="true" aria-controls="svc-1">
+            <span class="service__n">01</span>
+            <span class="service__main"><span class="service__t">Digital Presence</span></span>
+            <span class="service__count">6 servicios</span>
+            <span class="service__icon" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="service__panel" id="svc-1" role="region" aria-labelledby="svc-1-btn">
+          <div class="service__panel-in">
+            <ul class="svc-items">
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-1-1"><span>Contenido para redes sociales</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-1-1"><div class="svc-item__in"><p>Diseño y redacción de publicaciones, carruseles, historias y reels con la identidad de tu marca, listos para publicar.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-1-3"><span>Fotografía de producto mejorada con IA</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-1-3"><div class="svc-item__in"><p>Mejoramos las fotos que ya tienes (luz, fondo y color) o creamos escenas nuevas con IA a partir de tu producto real.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-1-4"><span>Catálogos digitales</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-1-4"><div class="svc-item__in"><p>Catálogo en PDF o en línea con tus productos, precios y datos de contacto, fácil de compartir por WhatsApp.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-1-5"><span>Menús digitales</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-1-5"><div class="svc-item__in"><p>Menú para restaurantes y cafeterías, disponible con un código QR y fácil de actualizar.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-1-6"><span>Material publicitario</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-1-6"><div class="svc-item__in"><p>Flyers, banners y piezas para impresión o pantallas, alineadas con la imagen de tu marca.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-1-7"><span>Piezas para campañas y promociones</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-1-7"><div class="svc-item__in"><p>Conjunto de piezas para una fecha o promoción específica: publicaciones, historias, banners y anuncios.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="service">
+        <h3 class="service__h">
+          <button class="service__head" type="button" id="svc-2-btn" aria-expanded="false" aria-controls="svc-2">
+            <span class="service__n">02</span>
+            <span class="service__main"><span class="service__t">Web &amp; Digital Experiences</span></span>
+            <span class="service__count">5 servicios</span>
+            <span class="service__icon" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="service__panel" id="svc-2" role="region" aria-labelledby="svc-2-btn">
+          <div class="service__panel-in">
+            <ul class="svc-items">
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-2-1"><span>Sitios web corporativos</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-2-1"><div class="svc-item__in"><p>Sitio de varias páginas para presentar tu empresa, tus servicios y tu equipo, adaptado a celular.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-2-2"><span>Landing pages</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-2-2"><div class="svc-item__in"><p>Página enfocada en un solo producto, servicio u oferta, pensada para que el visitante te contacte o compre.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-2-3"><span>Páginas para campañas</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-2-3"><div class="svc-item__in"><p>Página temporal para un lanzamiento, evento o promoción, con formulario de registro.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-2-4"><span>Portafolios digitales</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-2-4"><div class="svc-item__in"><p>Página para mostrar tus proyectos o trabajos, ideal para profesionales independientes y estudios creativos.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-2-5"><span>Catálogos de productos en tu web</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-2-5"><div class="svc-item__in"><p>Sección de tu sitio con productos organizados por categorías, fotos y botón para pedir o cotizar.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="service">
+        <h3 class="service__h">
+          <button class="service__head" type="button" id="svc-3-btn" aria-expanded="false" aria-controls="svc-3">
+            <span class="service__n">03</span>
+            <span class="service__main"><span class="service__t">AI &amp; Automation</span></span>
+            <span class="service__count">6 servicios</span>
+            <span class="service__icon" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="service__panel" id="svc-3" role="region" aria-labelledby="svc-3-btn">
+          <div class="service__panel-in">
+            <ul class="svc-items">
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-3-1"><span>Chatbots</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-3-1"><div class="svc-item__in"><p>Bot que responde las preguntas frecuentes de tus clientes en tu web o WhatsApp, a cualquier hora.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-3-2"><span>Agentes de IA</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-3-2"><div class="svc-item__in"><p>Asistentes que además de responder realizan tareas: consultar información, agendar citas, registrar datos o actualizar pedidos.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-3-3"><span>Asistentes virtuales</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-3-3"><div class="svc-item__in"><p>Asistentes de IA para tu equipo: redactar respuestas, resumir documentos o encontrar información de tu negocio.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-3-5"><span>Automatización de tareas repetitivas</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-3-5"><div class="svc-item__in"><p>Tareas manuales como copiar datos, enviar recordatorios o armar reportes pasan a hacerse solas.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-3-6"><span>Automatización de procesos</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-3-6"><div class="svc-item__in"><p>Conectamos todos los pasos de un proceso, por ejemplo del pedido a la factura, para que avance sin trabajo manual.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-3-8"><span>Captura y organización de leads</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-3-8"><div class="svc-item__in"><p>Cada contacto nuevo queda registrado, clasificado y con seguimiento, en lugar de perderse en los chats.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="service">
+        <h3 class="service__h">
+          <button class="service__head" type="button" id="svc-4-btn" aria-expanded="false" aria-controls="svc-4">
+            <span class="service__n">04</span>
+            <span class="service__main"><span class="service__t">Business Tools</span></span>
+            <span class="service__count">7 servicios</span>
+            <span class="service__icon" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="service__panel" id="svc-4" role="region" aria-labelledby="svc-4-btn">
+          <div class="service__panel-in">
+            <ul class="svc-items">
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-4-1"><span>Cotizadores personalizados</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-4-1"><div class="svc-item__in"><p>Herramienta que calcula precios con tus propias variables y genera la cotización al instante.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-4-2"><span>CRM para gestión de clientes</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-4-2"><div class="svc-item__in"><p>Sistema para registrar clientes, oportunidades y seguimientos, configurado según tu proceso de ventas.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-4-3"><span>Dashboards</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-4-3"><div class="svc-item__in"><p>Tableros con los números clave de tu negocio, como ventas, pedidos o clientes, que se actualizan solos.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-4-5"><span>Sistemas para centralizar información</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-4-5"><div class="svc-item__in"><p>Una base de datos ordenada para la información que hoy está repartida entre hojas de cálculo, correos y chats.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-4-6"><span>Generadores de propuestas y documentos</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-4-6"><div class="svc-item__in"><p>Propuestas, contratos o certificados que se crean automáticamente con los datos de cada cliente.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-4-7"><span>Herramientas internas</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-4-7"><div class="svc-item__in"><p>Pequeñas aplicaciones para tareas específicas de tu equipo, como inventario, turnos, solicitudes o control de procesos.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+              <li class="svc-item">
+                <button class="svc-item__head" type="button" aria-expanded="false" aria-controls="svc-4-8"><span>Soluciones a medida con no-code y low-code</span><span class="svc-item__icon" aria-hidden="true"></span></button>
+                <div class="svc-item__body" id="svc-4-8"><div class="svc-item__in"><p>Si tu necesidad no encaja en lo anterior, construimos la herramienta con plataformas no-code y low-code.</p><a class="link-plain" href="#contacto">Cotizar este servicio →</a></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="services-help col-wide" data-reveal>
+      <p>¿No sabes cuál necesitas? En la primera llamada te recomendamos por dónde empezar.</p>
+      <a class="link-plain" href="#contacto">Agenda una llamada gratis →</a>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ -->
+<section class="section" id="por-que">
+  <div class="container grid">
+    <p class="eyebrow col-label" data-reveal>Por qué Frame Works</p>
+    <h2 class="h-lg col-main" data-reveal data-split>Un solo equipo para que tu negocio se vea, venda y funcione mejor<i class="dot">.</i></h2>
+    <ul class="why col-wide" data-stagger>
+      <li><span class="why__n">01</span><h3>Todo en un solo lugar</h3><p>Marketing, sitio web y automatización trabajando juntos, sin coordinar a tres proveedores distintos.</p></li>
+      <li><span class="why__n">02</span><h3>Hablamos tu idioma</h3><p>Cero tecnicismos. Sabes qué vamos a hacer, por qué y cuánto cuesta antes de empezar.</p></li>
+      <li><span class="why__n">03</span><h3>Herramientas probadas</h3><p>Usamos plataformas de IA y automatización confiables. Nada de experimentos con tu negocio.</p></li>
+      <li><span class="why__n">04</span><h3>Resultados que puedes ver</h3><p>Definimos contigo qué medir y te mostramos el avance de forma clara.</p></li>
+    </ul>
+  </div>
+</section>
+
+<div class="kinetic" aria-hidden="true">
+  <div class="kinetic__row"><span>Digital Presence</span><i>.</i><span class="o">Web &amp; Digital Experiences</span><i>.</i><span>AI &amp; Automation</span><i>.</i><span class="o">Business Tools</span><i>.</i><span>Digital Presence</span><i>.</i><span class="o">Web &amp; Digital Experiences</span><i>.</i></div>
+</div>
+
+<!-- TRABAJO EN PANTALLA -->
+<section class="section showcase" id="trabajo">
+  <div class="container grid">
+    <p class="eyebrow col-label" data-reveal>Nuestro trabajo</p>
+    <div class="col-main">
+      <h2 class="h-lg" data-reveal data-split>Así se ve una solución de Frame Works<i class="dot">.</i></h2>
+      <p class="lead muted section-intro" data-reveal>Sitios que convierten visitas en clientes y asistentes que responden por ti, todo con la identidad de tu marca.</p>
+    </div>
+  </div>
+  <div class="container showcase__stage" data-reveal>
+    <figure class="device laptop">
+      <div class="laptop__screen">
+        <div class="laptop__bar" aria-hidden="true"><i></i><i></i><i></i><span>tunegocio.com</span></div>
+        <div class="mini-site" aria-hidden="true">
+          <div class="mini-site__nav"><b>Tu Marca<i>.</i></b><span>Servicios</span><span>Casos</span><span class="mini-site__btn">Contacto</span></div>
+          <div class="mini-site__hero">
+            <div>
+              <p class="mini-site__eyebrow">Tu negocio, en línea</p>
+              <p class="mini-site__title">Tu negocio, abierto 24/7<i>.</i></p>
+              <p class="mini-site__text">Claro, rápido y pensado para que te contacten.</p>
+              <span class="mini-site__cta">Agenda una cita →</span>
+            </div>
+            <div class="mini-site__img" style="background-image:url(assets/img/hero.jpg)"></div>
+          </div>
+        </div>
+      </div>
+      <div class="laptop__base" aria-hidden="true"></div>
+      <figcaption><span>01</span> Sitio web · Web &amp; Digital Experiences</figcaption>
+    </figure>
+    <figure class="device phone">
+      <div class="phone__screen">
+        <div class="phone__head" aria-hidden="true"><span class="phone__avatar">FW</span><div><b>Panadería La Espiga</b><small>Asistente · en línea</small></div></div>
+        <ul class="chat" aria-label="Ejemplo de conversación con un asistente de WhatsApp">
+          <li class="chat__msg chat__msg--in">Hola, ¿tienen pan integral hoy?</li>
+          <li class="chat__msg chat__msg--out">¡Hola! Sí, sale del horno a las 4:00 p. m. ¿Quieres que te aparte uno?</li>
+          <li class="chat__msg chat__msg--in">Sí, dos por favor</li>
+          <li class="chat__msg chat__msg--out">Listo, quedan 2 panes integrales a tu nombre. Te aviso cuando estén listos.</li>
+          <li class="chat__typing" aria-hidden="true"><i></i><i></i><i></i></li>
+        </ul>
+      </div>
+      <figcaption><span>02</span> Asistente de WhatsApp con IA · AI &amp; Automation</figcaption>
+    </figure>
+  </div>
+  <p class="container showcase__note">Ejemplos ilustrativos.</p>
+</section>
+
+<!-- CASOS -->
+<section class="section" id="casos">
+  <div class="container grid cases-top">
+    <p class="eyebrow col-label" data-reveal>Casos</p>
+    <div class="col-main" data-reveal>
+      <h2 data-split data-reveal class="h-lg">Así se ve en un negocio real.</h2>
+      <p class="lead muted section-intro">Situaciones habituales en las que trabajamos. El problema casi nunca es la falta de tecnología.</p>
+    </div>
+  </div>
+  <div class="cases" id="cases" tabindex="0" aria-label="Casos, desplazamiento horizontal">
+    <article class="case">
+      <div class="photo ph-1 case__photo"><img src="assets/img/caso-panaderia.jpg" alt="Persona tomando fotos de comida con el celular para redes sociales" loading="lazy" onerror="this.remove()"></div>
+      <p class="case__tag">01 · Alimentación</p>
+      <h3 class="case__who">Panadería artesanal</h3>
+      <dl class="case__ba">
+        <dt>Antes</dt><dd>Pedidos por WhatsApp anotados a mano en un cuaderno.</dd>
+        <dt>Después</dt><dd>Los pedidos llegan a una sola lista, se confirman solos y producción ve el total del día.</dd>
+      </dl>
+      <ul class="case__tools" aria-label="Herramientas usadas"><li>WhatsApp</li><li>Automatización</li><li>Lista de pedidos</li></ul>
+    </article>
+    <article class="case">
+      <div class="photo ph-3 case__photo"><img src="assets/img/caso-distribuidora.jpg" alt="Laptop mostrando un panel de ventas con gráficas" loading="lazy" onerror="this.remove()"></div>
+      <p class="case__tag">02 · Distribución</p>
+      <h3 class="case__who">Distribuidora</h3>
+      <dl class="case__ba">
+        <dt>Antes</dt><dd>Facturas copiadas del correo a la hoja de cálculo, una a una.</dd>
+        <dt>Después</dt><dd>Las facturas se leen, se registran y se concilian. El equipo solo revisa las excepciones.</dd>
+      </dl>
+      <ul class="case__tools" aria-label="Herramientas usadas"><li>Lectura de facturas con IA</li><li>Dashboard</li><li>Correo</li></ul>
+    </article>
+    <article class="case">
+      <div class="photo ph-4 case__photo"><img src="assets/img/caso-clinica.jpg" alt="Mujer revisando mensajes y citas en su celular" loading="lazy" onerror="this.remove()"></div>
+      <p class="case__tag">03 · Salud</p>
+      <h3 class="case__who">Clínica</h3>
+      <dl class="case__ba">
+        <dt>Antes</dt><dd>Citas perdidas y recordatorios enviados manualmente.</dd>
+        <dt>Después</dt><dd>Agenda conectada, recordatorios automáticos y reprogramación con un solo mensaje.</dd>
+      </dl>
+      <ul class="case__tools" aria-label="Herramientas usadas"><li>Agenda en línea</li><li>Recordatorios automáticos</li><li>WhatsApp</li></ul>
+    </article>
+    <article class="case">
+      <div class="photo ph-2 case__photo"><img src="assets/img/caso-tienda-en-linea.jpg" alt="Emprendedora de moda gestionando su tienda en línea desde la laptop" loading="lazy" onerror="this.remove()"></div>
+      <p class="case__tag">04 · Comercio electrónico</p>
+      <h3 class="case__who">Tienda en línea</h3>
+      <dl class="case__ba">
+        <dt>Antes</dt><dd>Las mismas preguntas de clientes, veinte veces al día.</dd>
+        <dt>Después</dt><dd>Un asistente responde lo frecuente con tu tono y pasa lo importante a una persona.</dd>
+      </dl>
+      <ul class="case__tools" aria-label="Herramientas usadas"><li>Chatbot con IA</li><li>Instagram</li><li>WhatsApp</li></ul>
+    </article>
+  </div>
+  <div class="container cases-ui">
+    <div class="cases-ui__bar" aria-hidden="true"><span id="casesBar"></span></div>
+    <div class="cases-ui__btns">
+      <button type="button" class="circle-btn" id="casesPrev" aria-label="Caso anterior">←</button>
+      <button type="button" class="circle-btn" id="casesNext" aria-label="Caso siguiente">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES: quitar el atributo "hidden" cuando haya logos reales en assets/img/clientes/ -->
+<section class="clients" id="clientes" hidden>
+  <div class="container">
+    <p class="eyebrow clients__label">Han confiado en nosotros</p>
+    <ul class="clients__list">
+      <!-- <li><img src="assets/img/clientes/nombre-cliente.svg" alt="Nombre del cliente"></li> -->
+    </ul>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="section" id="metodo">
+  <div class="container grid method">
+    <div class="method__aside">
+      <div class="method__sticky">
+        <p class="eyebrow">Método</p>
+        <h2 data-split data-reveal class="h-lg">Primero el proceso. Después, la herramienta.</h2>
+        <div class="method__counter" aria-hidden="true"><span class="method__num" id="methodNum">01</span><span class="method__total">/ 04</span></div>
+        <div class="method__bar" aria-hidden="true"><span id="methodBar"></span></div>
+      </div>
+    </div>
+    <ol class="method__steps">
+      <li class="step" style="--i:0">
+        <div class="step__text">
+          <span class="step__n">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Pasamos tiempo con tu equipo para ver cómo circula el trabajo: quién hace qué, dónde se atasca y qué se repite cada semana.</p>
+          <span class="step__meta">Resultado: mapa del proceso y plan priorizado</span>
+        </div>
+        <div class="photo ph-3 step__photo"><img src="assets/img/metodo-1-diagnostico.jpg" alt="Equipo analizando ideas y procesos en notas adhesivas sobre una pared de vidrio" loading="lazy" onerror="this.remove()"></div>
+      </li>
+      <li class="step" style="--i:1">
+        <div class="step__text">
+          <span class="step__n">02</span>
+          <h3>Diseño</h3>
+          <p>Dibujamos el proceso ideal y decidimos qué debe automatizarse, qué necesita criterio humano y qué directamente sobra.</p>
+          <span class="step__meta">Resultado: proceso rediseñado y alcance cerrado</span>
+        </div>
+        <div class="photo ph-2 step__photo"><img src="assets/img/metodo-2-diseno.jpg" alt="Bocetos de diseño de un sitio web junto a una laptop" loading="lazy" onerror="this.remove()"></div>
+      </li>
+      <li class="step" style="--i:2">
+        <div class="step__text">
+          <span class="step__n">03</span>
+          <h3>Implementación</h3>
+          <p>Conectamos tus herramientas, automatizamos los flujos y aplicamos inteligencia artificial donde aporta: clasificar, responder, resumir, anticipar.</p>
+          <span class="step__meta">Resultado: automatizaciones funcionando por fases</span>
+        </div>
+        <div class="photo ph-4 step__photo"><img src="assets/img/metodo-3-implementacion.jpg" alt="Especialista trabajando en una laptop con gráficas y datos" loading="lazy" onerror="this.remove()"></div>
+      </li>
+      <li class="step" style="--i:3">
+        <div class="step__text">
+          <span class="step__n">04</span>
+          <h3>Acompañamiento</h3>
+          <p>Capacitamos a tu equipo, medimos resultados y ajustamos. La tecnología se queda funcionando y tú te quedas con el control.</p>
+          <span class="step__meta">Resultado: equipo autónomo y mejoras medibles</span>
+        </div>
+        <div class="photo ph-5 step__photo"><img src="assets/img/metodo-4-acompanamiento.jpg" alt="Consultora presentando resultados en una pantalla a su cliente" loading="lazy" onerror="this.remove()"></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="offer" id="oferta">
+  <div class="container grid">
+    <p class="eyebrow col-label" data-reveal>Primer paso</p>
+    <div class="col-main offer__in">
+      <h2 class="offer__title" data-reveal data-split>¿Por dónde empezar? Por una conversación<i class="dot">.</i></h2>
+      <p class="lead offer__text" data-reveal>En 30 minutos revisamos tu negocio, te decimos qué mejorar primero y cuánto te costaría. Si no somos la mejor opción para ti, también te lo diremos.</p>
+      <div class="offer__ctas" data-reveal>
+        <a class="btn btn--pill btn--lg" href="#contacto"><span>Agenda tu llamada gratis</span><span class="arr" aria-hidden="true">→</span></a>
+        <p class="hero__trust hero__trust--dark"><span>30 minutos</span><span>Sin costo</span><span>Sin compromiso</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="section section--tight" id="para-quien">
+  <div class="container grid">
+    <p class="eyebrow col-label" data-reveal>Para quién</p>
+    <div class="audience col-wide">
+      <article class="aud" data-reveal>
+        <div class="photo ph-3"><img src="assets/img/para-quien-empresas.jpg" alt="Equipo directivo en una reunión de estrategia con laptops" loading="lazy" onerror="this.remove()"></div>
+        <div class="aud__body">
+          <h3>Empresas establecidas</h3>
+          <p>Procesos que crecieron sin orden, equipos saturados y sistemas que no se hablan entre sí. Ponemos estructura sin frenar la operación.</p>
+        </div>
+      </article>
+      <article class="aud" data-reveal>
+        <div class="photo ph-2"><img src="assets/img/para-quien-emprendedores.jpg" alt="Creadora de contenido grabando un video con su celular y un aro de luz" loading="lazy" onerror="this.remove()"></div>
+        <div class="aud__body">
+          <h3>Pymes y emprendedores</h3>
+          <p>Poco tiempo, muchas tareas y la sensación de que la IA es para otros. Empezamos por lo que más horas te quita, con una inversión a tu medida.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS: banda a sangre -->
+<section class="manifesto-band" id="nosotros">
+  <div class="photo ph-1 parallax manifesto-band__photo">
+    <img src="assets/img/nosotros-banda.jpg" alt="Equipo de trabajo conversando alrededor de una mesa en una oficina moderna" loading="lazy" onerror="this.remove()">
+  </div>
+  <div class="container grid manifesto-band__in">
+    <p class="eyebrow col-label" data-reveal>Nosotros</p>
+    <h2 data-split class="manifesto col-main" data-reveal>La tecnología va detrás. <em>La solución, al frente.</em></h2>
+  </div>
+</section>
+
+<section class="section section--dark about-sec">
+  <div class="container grid">
+    <div class="about col-wide">
+      <figure class="about__photo crop crop--light" data-reveal>
+        <div class="photo ph-5"><img src="assets/img/nosotros-equipo.jpg" alt="Equipo colaborando alrededor de una laptop en una oficina moderna" loading="lazy" onerror="this.remove()"></div>
+        <span class="crop__c" aria-hidden="true"></span>
+      </figure>
+      <div class="about__text" data-reveal>
+        <p class="lead">Frame Works nace de una idea sencilla: la mayoría de los negocios no necesitan más software, necesitan que alguien entienda cómo trabajan y les ayude a hacerlo mejor.</p>
+        <p>Somos consultores de procesos que dominan la automatización y la inteligencia artificial. Nos sentamos con tu equipo, entendemos tu oficio y solo después elegimos la tecnología.</p>
+        <ul class="principles" data-stagger>
+          <li><b>Entender antes de automatizar</b><span>Ninguna herramienta arregla un proceso que nunca se dibujó.</span></li>
+          <li><b>Tecnología que tu equipo entiende</b><span>Si solo nosotros sabemos cómo funciona, no está terminado.</span></li>
+          <li><b>Resultados que se pueden medir</b><span>Horas recuperadas, errores evitados, clientes mejor atendidos.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIFRAS: quitar "hidden" y escribir valores reales en data-count -->
+<section class="stats" id="cifras" hidden>
+  <div class="container grid">
+    <p class="eyebrow col-label">En cifras</p>
+    <ul class="stats__list col-wide">
+      <li><span class="stats__n" data-count="0" data-suffix="+">0</span><span class="stats__l">Negocios acompañados</span></li>
+      <li><span class="stats__n" data-count="0" data-suffix="+">0</span><span class="stats__l">Automatizaciones activas</span></li>
+      <li><span class="stats__n" data-count="0" data-suffix=" h">0</span><span class="stats__l">Horas ahorradas al mes</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container grid">
+    <div class="col-label faq-head" data-reveal>
+      <p class="eyebrow">Preguntas frecuentes</p>
+    </div>
+    <div class="faq col-main" data-reveal>
+      <details>
+        <summary>¿Necesito saber de tecnología para trabajar con ustedes?</summary>
+        <div class="faq__a"><p>No. Tú conoces tu negocio y nosotros la tecnología. Te explicamos cada decisión en lenguaje claro y te dejamos todo documentado.</p></div>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta?</summary>
+        <div class="faq__a"><p>Depende del alcance. Por eso empezamos con un diagnóstico: al terminarlo sabrás qué conviene automatizar, en qué orden y con qué inversión, antes de comprometerte a nada más.</p></div>
+      </details>
+      <details>
+        <summary>¿Trabajan con las herramientas que ya uso?</summary>
+        <div class="faq__a"><p>Siempre que sea posible, sí. Preferimos conectar y aprovechar lo que ya tienes antes que añadir herramientas nuevas.</p></div>
+      </details>
+      <details>
+        <summary>¿Qué pasa con los datos de mi negocio y de mis clientes?</summary>
+        <div class="faq__a"><p>Solo accedemos a lo necesario, trabajamos con proveedores que cumplen la normativa de protección de datos y cada automatización con IA mantiene a una persona en el control.</p></div>
+      </details>
+      <details>
+        <summary>¿Cuándo se empiezan a ver resultados?</summary>
+        <div class="faq__a"><p>Trabajamos por fases para que las primeras mejoras lleguen pronto. En el diagnóstico te indicamos plazos concretos para tu caso.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section section--dark contact" id="contacto">
+  <div class="container grid">
+    <p class="eyebrow col-label" data-reveal>Contacto</p>
+    <h2 data-split class="h-xl col-main" data-reveal>Hablemos de tu negocio<i class="dot">.</i></h2>
+    <div class="contact__info" data-reveal>
+      <p>Cuéntanos qué te gustaría mejorar. Te proponemos una llamada de 30 minutos, gratis y sin compromiso, para revisar tu caso.</p>
+      <p class="contact__mail"><span class="eyebrow">Escríbenos</span><a href="mailto:frameworkscol@gmail.com">frameworkscol@gmail.com</a></p>
+    </div>
+    <form class="form" id="contactForm" data-endpoint="https://formsubmit.co/ajax/frameworkscol@gmail.com" data-mailto="frameworkscol@gmail.com" novalidate data-reveal>
+      <input type="hidden" name="_subject" value="Nueva solicitud desde la web de Frame Works">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field">
+        <label for="f-name">Nombre</label>
+        <input id="f-name" name="nombre" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-email">Correo electrónico</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field field--full">
+        <label for="f-company">Empresa <span class="opt">(opcional)</span></label>
+        <input id="f-company" name="empresa" type="text" autocomplete="organization">
+      </div>
+      <fieldset class="field field--full interest">
+        <legend>¿Qué te interesa?</legend>
+        <div class="interest__opts">
+          <label><input type="checkbox" name="interes" value="Digital Presence"><span>Digital Presence</span></label>
+          <label><input type="checkbox" name="interes" value="Web &amp; Digital Experiences"><span>Web &amp; Digital Experiences</span></label>
+          <label><input type="checkbox" name="interes" value="AI &amp; Automation"><span>AI &amp; Automation</span></label>
+          <label><input type="checkbox" name="interes" value="Business Tools"><span>Business Tools</span></label>
+          <label><input type="checkbox" name="interes" value="Aún no lo sé"><span>Aún no lo sé</span></label>
+        </div>
+      </fieldset>
+      <div class="field field--full">
+        <label for="f-msg">¿Qué te gustaría mejorar en tu negocio?</label>
+        <textarea id="f-msg" name="mensaje" rows="4" required></textarea>
+      </div>
+      <div class="form__foot">
+        <button class="btn btn--pill" type="submit"><span>Quiero mi llamada gratis</span><span class="arr" aria-hidden="true">→</span></button>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer__mark" aria-hidden="true">Frame Works<i>.</i></p>
+    <div class="footer__row">
+      <span>© <span id="year">2026</span> Frame Works</span>
+      <nav class="footer__links" aria-label="Legal">
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+      </nav>
+      <a href="#top" class="link-plain">Volver arriba ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n-en.js?v=20261012b" defer></script>
+<script src="js/i18n.js?v=20261012b" defer></script>
+<script src="js/main.js?v=20261012b" defer></script>
+</body>
+</html>
