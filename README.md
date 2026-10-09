@@ -78,4 +78,4 @@ Cualquier alojamiento estático sirve: Netlify (arrastrar la carpeta `web`), Ver
 - Brochure de marketing (`assets/img/ads/`): marcas ficticias. NOIR = imagen creada con IA (FLUX.1 schnell, licencia Apache 2.0); VOLT y AURA = fotos de Unsplash (licencia gratuita). Animados con CSS.
 - Escena de desarrollo web: estudio ficticio ARCA, fotos de Unsplash en `assets/img/arca/`.
 - Para usar videos propios (por ejemplo, de Higgsfield), ver `../identidad-visual/prompts-videos-higgsfield.md`.
-- Portátil de Servicios (`assets/img/laptop.webp`): imagen proporcionada por Frame Works, con el fondo quitado; el tablero se proyecta en su pantalla con JavaScript (matrix3d).
+- Portátil de Servicios (`assets/img/laptop.svg`): ilustración propia (SVG); el tablero se proyecta en su pantalla con JavaScript (matrix3d).
