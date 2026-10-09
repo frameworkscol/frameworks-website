@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..500&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=20261014c">
+  <link rel="stylesheet" href="css/styles.css?v=20261015c">
   <script>
     // Activa la animación de entrada del logo (se omite si el visitante prefiere menos movimiento)
     // Al recargar, empezar siempre desde arriba (sin restaurar scroll ni saltar a #secciones)
@@ -145,13 +145,37 @@
 <!-- SERVICIOS -->
 <section class="section services2" id="servicios">
   <div class="container">
-    <div class="svc2__head">
-      <p class="eyebrow" data-reveal>Servicios</p>
-      <h2 class="h-lg" data-reveal data-split>Qué hacemos<i class="dot">.</i></h2>
-      <p class="lead muted" data-reveal>Cuatro áreas para que tu negocio se vea, venda y funcione mejor.</p>
+    <div class="svc2__hero">
+      <div class="svc2__pitch">
+        <p class="eyebrow" data-reveal>Servicios</p>
+        <h2 class="h-lg" data-reveal data-split>Soluciones digitales para negocios que quieren crecer<i class="dot">.</i></h2>
+        <p class="svc2__why" data-reveal><b>Hoy no basta con tener un buen producto.</b> Tus clientes te buscan en redes, esperan respuesta inmediata y comparan antes de comprar. Unimos marketing, sitios web, inteligencia artificial y herramientas a la medida para que te encuentren, te elijan y tu equipo trabaje sin tareas repetitivas.</p>
+        <p class="svc2__claim" data-reveal>Elige un área y descubre cómo podemos ayudarte a vender más y trabajar menos.</p>
+      </div>
+      <div class="svc2__visual" data-reveal aria-hidden="true">
+        <div class="mon">
+          <div class="mon__screen">
+            <div class="dash">
+              <div class="dash__top"><img src="assets/img/logo/logo-una-linea.png" alt="" width="846" height="114"><span class="dash__tabs"><i class="is-on">Resumen</i><i>Clientes</i><i>Campañas</i></span><span class="dash__live"><i></i>En vivo</span></div>
+              <p class="dash__hi">Tu negocio, en un solo lugar</p>
+              <div class="dash__kpis">
+                <div class="dash__kpi"><small>Leads nuevos</small><b>128</b><em>+24%</em></div>
+                <div class="dash__kpi"><small>Tiempo de respuesta</small><b>2 min</b><em>−85%</em></div>
+                <div class="dash__kpi"><small>Ventas del mes</small><b>+32%</b><em>vs. mes anterior</em></div>
+              </div>
+              <div class="dash__row">
+                <div class="dash__chart"><small>Clientes por canal</small><svg viewBox="0 0 200 70" preserveAspectRatio="none"><path class="dash__area" d="M0 60 C25 55 35 40 60 42 S100 25 125 28 S165 10 200 8 V70 H0Z"/><path class="dash__line" d="M0 60 C25 55 35 40 60 42 S100 25 125 28 S165 10 200 8"/></svg></div>
+                <div class="dash__feed"><small>Actividad</small><span><i></i>Lead calificado por IA</span><span><i></i>Respuesta enviada por WhatsApp</span><span><i></i>Nueva venta desde la web</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="mon__neck"></div><div class="mon__foot"></div>
+        </div>
+        <span class="svc2__note">Vista de ejemplo</span>
+      </div>
     </div>
     <div class="svc2" data-reveal>
-      <div class="svc2__tabs" role="tablist" aria-label="Categorías de servicios"><button type="button" class="svc2__tab is-on" role="tab" id="svc2-tab-presence" aria-controls="svc2-presence" aria-selected="true"><span>01</span>Digital Presence</button><button type="button" class="svc2__tab" role="tab" id="svc2-tab-web" aria-controls="svc2-web" aria-selected="false"><span>02</span>Web &amp; Digital Experiences</button><button type="button" class="svc2__tab" role="tab" id="svc2-tab-ai" aria-controls="svc2-ai" aria-selected="false"><span>03</span>AI &amp; Automation</button><button type="button" class="svc2__tab" role="tab" id="svc2-tab-tools" aria-controls="svc2-tools" aria-selected="false"><span>04</span>Business Tools</button></div>
+      <div class="svc2__cards" role="tablist" aria-label="Categorías de servicios"><button type="button" class="svc2__card is-on" role="tab" id="svc2-tab-presence" aria-controls="svc2-presence" aria-selected="true"><span class="svc2__card-ic"><svg viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6L7 10z"/><path d="M17 9.5a3.5 3.5 0 0 1 0 5"/></svg></span><span class="svc2__card-n">01</span><b>Digital Presence</b><small>Contenido y campañas que hacen visible tu marca.</small><span class="svc2__card-go">Ver servicios <i>→</i></span></button><button type="button" class="svc2__card" role="tab" id="svc2-tab-web" aria-controls="svc2-web" aria-selected="false"><span class="svc2__card-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.2 2.5 13.8 0 16M12 4c-2.5 2.2-2.5 13.8 0 16"/></svg></span><span class="svc2__card-n">02</span><b>Web &amp; Digital Experiences</b><small>Sitios rápidos que convierten visitas en clientes.</small><span class="svc2__card-go">Ver servicios <i>→</i></span></button><button type="button" class="svc2__card" role="tab" id="svc2-tab-ai" aria-controls="svc2-ai" aria-selected="false"><span class="svc2__card-ic"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="10" rx="3"/><path d="M12 8V5M9.5 13h.01M14.5 13h.01"/></svg></span><span class="svc2__card-n">03</span><b>AI &amp; Automation</b><small>IA y automatizaciones que trabajan por tu equipo.</small><span class="svc2__card-go">Ver servicios <i>→</i></span></button><button type="button" class="svc2__card" role="tab" id="svc2-tab-tools" aria-controls="svc2-tools" aria-selected="false"><span class="svc2__card-ic"><svg viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg></span><span class="svc2__card-n">04</span><b>Business Tools</b><small>CRM, tableros y herramientas a tu medida.</small><span class="svc2__card-go">Ver servicios <i>→</i></span></button></div>
       <div class="svc2__panel is-on" id="svc2-presence" role="tabpanel" aria-labelledby="svc2-tab-presence">
         <div class="svc2__intro">
           <h3 class="svc2__name">Digital Presence<i class="dot">.</i></h3>
@@ -745,8 +769,8 @@
   </div>
 </footer>
 
-<script src="js/i18n-en.js?v=20261014c" defer></script>
-<script src="js/i18n.js?v=20261014c" defer></script>
-<script src="js/main.js?v=20261014c" defer></script>
+<script src="js/i18n-en.js?v=20261015c" defer></script>
+<script src="js/i18n.js?v=20261015c" defer></script>
+<script src="js/main.js?v=20261015c" defer></script>
 </body>
 </html>

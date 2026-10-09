@@ -283,7 +283,7 @@
   });
 
   /* ---------- Servicios: pestañas por categoría ---------- */
-  var svcTabs = Array.prototype.slice.call(document.querySelectorAll('.svc2__tab'));
+  var svcTabs = Array.prototype.slice.call(document.querySelectorAll('.svc2__card'));
   svcTabs.forEach(function (tab, i) {
     tab.addEventListener('click', function () {
       svcTabs.forEach(function (t) {
@@ -291,6 +291,11 @@
         t.classList.toggle('is-on', on); t.setAttribute('aria-selected', String(on));
         panel.hidden = !on; panel.classList.toggle('is-on', on);
       });
+      // en pantallas angostas la lista queda debajo de las 4 tarjetas: la llevamos a la vista
+      if (window.innerWidth < 1100) {
+        var p = document.getElementById(tab.getAttribute('aria-controls'));
+        window.scrollTo({ top: p.getBoundingClientRect().top + window.scrollY - 90, behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
     });
     tab.addEventListener('keydown', function (e) {
       var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
