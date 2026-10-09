@@ -1429,3 +1429,4 @@ h2:not([data-split]) { padding-bottom: .12em; }
 }
 .boot__wire { stroke-dasharray: 1 2; stroke-dashoffset: 1.05; } .boot.is-out .boot__wire { stroke-dashoffset: 1.05; }
 @media (max-width: 560px) { .svc2__go { display: none; } .svc2__item { grid-template-columns: auto 1fr; } }
+.boot__ready { top: 9.9cqw; }
