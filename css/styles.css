@@ -1562,3 +1562,4 @@ h2:not([data-split]) { padding-bottom: .12em; }
 .lap__screen .dash { height: 100%; border-radius: 0; }
 .lap__glass { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(120deg, rgba(255, 255, 255, .22) 0%, rgba(255, 255, 255, .06) 30%, rgba(255, 255, 255, 0) 46%); }
 .lap__glow, .mon3__glow { display: none; }
+.lap__img { filter: none; }
