@@ -397,6 +397,8 @@ window.FW_EN = {
 "Sitios rápidos que convierten visitas en clientes.": "Fast websites that turn visits into clients.",
 "IA y automatizaciones que trabajan por tu equipo.": "AI and automations that work for your team.",
 "CRM, tableros y herramientas a tu medida.": "CRM, dashboards and tools built for you.",
+"Tu negocio puede llegar más lejos cuando todo funciona mejor.": "Your business can go further when everything works better.",
+"Creamos soluciones digitales que optimizan procesos, automatizan tareas y fortalecen tu presencia en línea. Menos trabajo repetitivo y más oportunidades para crecer.": "We build digital solutions that streamline processes, automate tasks and strengthen your online presence. Less repetitive work and more opportunities to grow.",
 "Lead de prueba": "Test lead",
 "Quiere cotizar": "Wants a quote",
 "Solo pregunta": "Just asking",
