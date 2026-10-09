@@ -1494,3 +1494,17 @@ h2:not([data-split]) { padding-bottom: .12em; }
 @media (max-width: 900px) { .svc2__hero { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .svc2__cards { grid-template-columns: 1fr; } .svc2__card { padding: 20px; } .svc2__card-ic { width: 44px; height: 44px; } }
 .svc2__card { white-space: normal; }
+
+/* Monitor de Servicios con aspecto real (tipo iMac): cuerpo de aluminio, bisel negro, cristal, mentón y pie */
+.svc2__visual { padding-bottom: clamp(28px, 4vw, 48px); }
+.mon { position: relative; }
+.mon__body { position: relative; padding: 1.1% 1.1% 0; border-radius: 18px; background: linear-gradient(180deg, #f6f6f8 0%, #e4e4e9 100%); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .9), inset 0 -1px 0 rgba(0, 0, 0, .06), 0 0 0 1px rgba(16, 24, 32, .1), 0 40px 70px -36px rgba(16, 24, 32, .55), 0 12px 24px -14px rgba(16, 24, 32, .25); }
+.mon__cam { position: absolute; top: .45%; left: 50%; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #4b5563, #0b0d10 70%); box-shadow: 0 0 0 1.5px rgba(0, 0, 0, .25); z-index: 2; }
+.mon__screen { position: relative; padding: 1.4%; border-radius: 11px; background: #07090c; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); overflow: hidden; }
+.mon__screen .dash { border-radius: 4px; }
+.mon__glass { position: absolute; inset: 0; pointer-events: none; border-radius: inherit; background: linear-gradient(118deg, rgba(255, 255, 255, .16) 0%, rgba(255, 255, 255, .05) 28%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0) 100%); }
+.mon__chin { height: 0; padding-bottom: 7.5%; margin: 0 -1.1%; border-radius: 0 0 18px 18px; background: linear-gradient(180deg, #ececf0 0%, #d7d7dd 55%, #c8c8cf 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9); }
+.mon__neck { width: 20%; height: 0; padding-bottom: 12%; margin: 0 auto; background: linear-gradient(90deg, #a9a9b1 0%, #e9e9ee 30%, #f7f7f9 48%, #d9d9df 70%, #9d9da5 100%); clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%); box-shadow: none; }
+.mon__foot { position: relative; z-index: 1; width: 30%; height: 0; padding-bottom: 1.6%; margin: -.2% auto 0; border-radius: 3px 3px 10px 10px; background: linear-gradient(180deg, #f2f2f5 0%, #cfcfd6 60%, #b4b4bc 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9); }
+.mon__floor { width: 46%; height: 18px; margin: -6px auto 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(16, 24, 32, .32), rgba(16, 24, 32, 0)); }
+.mon__cam { top: .35%; width: 5px; height: 5px; margin-left: -2.5px; }
