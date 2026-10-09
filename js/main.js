@@ -282,6 +282,23 @@
     });
   });
 
+  /* ---------- Servicios: pestañas por categoría ---------- */
+  var svcTabs = Array.prototype.slice.call(document.querySelectorAll('.svc2__tab'));
+  svcTabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () {
+      svcTabs.forEach(function (t) {
+        var on = t === tab, panel = document.getElementById(t.getAttribute('aria-controls'));
+        t.classList.toggle('is-on', on); t.setAttribute('aria-selected', String(on));
+        panel.hidden = !on; panel.classList.toggle('is-on', on);
+      });
+    });
+    tab.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      var n = svcTabs[(i + d + svcTabs.length) % svcTabs.length]; n.focus(); n.click();
+    });
+  });
+
   /* ---------- Casos: galería horizontal con arrastre, botones y progreso ---------- */
   var cases = document.getElementById('cases');
   if (cases) {
@@ -486,7 +503,71 @@
   window.addEventListener('resize', fitHeroTitle);
   document.addEventListener('fw:lang', fitHeroTitle);
 
-  /* ---------- Mac del inicio: demo de automatización (WhatsApp → captura → CRM → respuesta) ----------
+  /* ---------- Computador del inicio: "arranque" de Frame Works ----------
+     Reposo con el logo → se escriben líneas de terminal → del centro sale una red que
+     conecta los servicios → mensaje final → la red se recoge y vuelve al reposo.
+     Se repite solo; al pasar el cursor arranca de inmediato. */
+  var boot = document.getElementById('boot');
+  if (boot) {
+    var bootLines = Array.prototype.slice.call(boot.querySelectorAll('.boot__l'));
+    var bootReady = boot.querySelector('.boot__ready');
+    var bootMotions = Array.prototype.slice.call(boot.querySelectorAll('animateMotion'));
+    var bootT = [], bootBusy = false, bootVisible = false;
+    var bAt = function (ms, fn) { bootT.push(setTimeout(fn, ms)); };
+    function typeInto(el, txt, ms) {
+      var i = 0; el.textContent = '';
+      el.classList.add('is-typing');
+      (function tick() {
+        el.textContent = txt.slice(0, ++i);
+        if (i < txt.length) bootT.push(setTimeout(tick, ms));
+        else el.classList.remove('is-typing');
+      })();
+    }
+    function bootReset() {
+      bootT.forEach(clearTimeout); bootT = [];
+      boot.className = 'boot';
+      bootLines.forEach(function (l) { l.textContent = ''; l.classList.remove('is-typing'); });
+      bootReady.textContent = '';
+      bootBusy = false;
+    }
+    function bootRun() {
+      if (bootBusy) return;
+      bootReset(); bootBusy = true;
+      var t = 0, CH = 22;
+      bAt(t, function () { boot.classList.add('is-term'); });
+      bootLines.forEach(function (l) {
+        var txt = T(l.dataset.t);
+        (function (start, txt) { bAt(start, function () { typeInto(l, '> ' + txt, CH); }); })(t + 250, txt);
+        t += 250 + (txt.length + 2) * CH;
+      });
+      bAt(t + 300, function () { boot.classList.add('is-hub'); });
+      bAt(t + 700, function () { boot.classList.add('is-net'); });
+      bAt(t + 1700, function () {
+        boot.classList.add('is-live');
+        bootMotions.forEach(function (m, i) { try { m.beginElement(); } catch (e) {} });
+        typeInto(bootReady, '> ' + T(bootReady.dataset.t), 18);
+      });
+      bAt(t + 5600, function () { boot.classList.add('is-out'); });
+      bAt(t + 6600, function () { bootReset(); bAt(2600, function () { if (bootVisible) bootRun(); }); });
+    }
+    if (reduceMotion) {
+      boot.classList.add('is-term', 'is-hub', 'is-net', 'is-live');
+      bootLines.forEach(function (l) { l.textContent = '> ' + T(l.dataset.t); });
+      bootReady.textContent = '> ' + T(bootReady.dataset.t);
+    } else {
+      var startBoot = function () { if (!bootBusy && bootVisible) bootRun(); };
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (en) {
+          bootVisible = en[0].isIntersecting;
+          if (bootVisible) setTimeout(startBoot, document.documentElement.classList.contains('intro-playing') ? 1600 : 600);
+          else bootReset();
+        }, { threshold: .3 }).observe(boot);
+      } else { bootVisible = true; startBoot(); }
+      boot.closest('.mac').addEventListener('mouseenter', startBoot);
+    }
+  }
+
+  /* ---------- Casos: demo animada (WhatsApp → CRM, marketing de contenido y desarrollo web) ----------
      Una línea de tiempo con reloj virtual: al pasar el cursor el reloj va más lento
      (y --slow alarga las transiciones CSS), así se aprecian mejor los detalles. */
   var demo = document.getElementById('demo');
@@ -638,6 +719,29 @@
       reels.forEach(function (r, j) { r.classList.toggle('is-on', j === i); });
     }
 
+    /* ----- Casos: cada escena es un caso; las pestañas la siguen y permiten saltar a ella ----- */
+    var caseTabs = Array.prototype.slice.call(document.querySelectorAll('.case-studio__tab'));
+    var SCENES = [0, BRAND_AT + BRAND_MS - 400, MKT_END + BRAND_MS - 400, CYCLE];
+    var curScene = -1;
+    function sceneSync() {
+      var k = vt < SCENES[1] ? 0 : vt < SCENES[2] ? 1 : 2;
+      if (k !== curScene) {
+        curScene = k;
+        caseTabs.forEach(function (t, i) { t.classList.toggle('is-on', i === k); t.setAttribute('aria-selected', String(i === k)); });
+      }
+      var bar = caseTabs[k] && caseTabs[k].querySelector('.case-studio__bar');
+      if (bar) bar.style.transform = 'scaleX(' + Math.min(1, (vt - SCENES[k]) / (SCENES[k + 1] - SCENES[k])) + ')';
+    }
+    function jumpTo(t) {
+      resetSystem(); hardReset(); vt = 0; fired = 0; tweens = [];
+      while (fired < EV.length && EV[fired][0] <= t) { vt = EV[fired][0]; EV[fired][1](); fired++; }
+      vt = t; tweens.forEach(function (tw) { tw.fn(1); }); tweens = [];
+      sceneSync();
+    }
+    caseTabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { jumpTo(i === 0 ? 0 : SCENES[i] - 1); });
+    });
+
     function frame(now) {
       if (!visible) { raf = 0; last = null; return; }
       if (last === null) last = now;
@@ -648,6 +752,7 @@
         reelBars[activeReel].style.width = Math.min(100, (vt - reelT0) * 100 / REEL_MS) + '%';
       }
       if (vt >= CYCLE) { vt = 0; fired = 0; tweens = []; }
+      if (caseTabs.length) sceneSync();
       raf = requestAnimationFrame(frame);
     }
     var play = function () { if (!raf && visible && !document.hidden) raf = requestAnimationFrame(frame); };
