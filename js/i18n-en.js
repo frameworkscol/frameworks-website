@@ -399,6 +399,7 @@ window.FW_EN = {
 "CRM, tableros y herramientas a tu medida.": "CRM, dashboards and tools built for you.",
 "Tu negocio puede llegar más lejos cuando todo funciona mejor.": "Your business can go further when everything works better.",
 "Creamos soluciones digitales que optimizan procesos, automatizan tareas y fortalecen tu presencia en línea. Menos trabajo repetitivo y más oportunidades para crecer.": "We build digital solutions that streamline processes, automate tasks and strengthen your online presence. Less repetitive work and more opportunities to grow.",
+"Emprendedora trabajando en su portátil en una oficina luminosa": "Entrepreneur working on her laptop in a bright office",
 "Lead de prueba": "Test lead",
 "Quiere cotizar": "Wants a quote",
 "Solo pregunta": "Just asking",
