@@ -78,4 +78,4 @@ Cualquier alojamiento estático sirve: Netlify (arrastrar la carpeta `web`), Ver
 - Brochure de marketing (`assets/img/ads/`): marcas ficticias. NOIR = imagen creada con IA (FLUX.1 schnell, licencia Apache 2.0); VOLT y AURA = fotos de Unsplash (licencia gratuita). Animados con CSS.
 - Escena de desarrollo web: estudio ficticio ARCA, fotos de Unsplash en `assets/img/arca/`.
 - Para usar videos propios (por ejemplo, de Higgsfield), ver `../identidad-visual/prompts-videos-higgsfield.md`.
-- Imagen de Servicios (`assets/img/servicios.jpg`): generada con IA (FLUX.1 schnell, licencia Apache 2.0).
+- Imagen de Servicios (`assets/img/servicios.jpg`): foto real de Unsplash (licencia gratuita, uso comercial).
