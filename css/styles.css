@@ -1545,3 +1545,11 @@ h2:not([data-split]) { padding-bottom: .12em; }
 .mon3__arm { left: 44.5%; width: 11%; top: 74%; height: 54%; }
 .mon3__base { left: 30%; width: 40%; top: 106%; height: 36%; transform: translateZ(calc(var(--t) * -2.6)) rotateX(76deg); background: radial-gradient(120% 140% at 50% 0%, #f6f7f9 0%, #d3d7dc 55%, #a9aeb5 100%); box-shadow: 0 0 0 1px rgba(0, 0, 0, .06), inset 0 2px 0 rgba(255, 255, 255, .8); }
 .mon3__floor { width: 58%; height: 54px; margin-top: -48px; }
+/* pie del monitor dibujado en SVG (más realista que planos en 3D) */
+.mon3__stage { position: relative; }
+.mon3__device { z-index: 2; }
+.mon3__stand { position: absolute; z-index: 1; left: 50%; width: 36%; top: 60%; transform: translateX(-56%); overflow: visible; pointer-events: none; }
+.mon3__floor { display: none; }
+.mon3 { padding-bottom: clamp(70px, 9vw, 120px); }
+.mon3__stand { top: 74%; width: 34%; transform: translateX(-47%); } .mon3 { padding-bottom: clamp(110px, 12vw, 170px); }
+.mon3__stand { top: 86%; width: 38%; transform: translateX(-47%); } .mon3 { padding-bottom: clamp(130px, 14vw, 200px); }
