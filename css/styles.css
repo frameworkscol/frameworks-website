@@ -1553,3 +1553,11 @@ h2:not([data-split]) { padding-bottom: .12em; }
 .mon3 { padding-bottom: clamp(70px, 9vw, 120px); }
 .mon3__stand { top: 74%; width: 34%; transform: translateX(-47%); } .mon3 { padding-bottom: clamp(110px, 12vw, 170px); }
 .mon3__stand { top: 86%; width: 38%; transform: translateX(-47%); } .mon3 { padding-bottom: clamp(130px, 14vw, 200px); }
+
+/* Servicios: portátil (imagen) con el tablero proyectado en su pantalla */
+.lap { position: relative; width: 100%; margin: clamp(10px, 2vw, 30px) 0 clamp(20px, 3vw, 40px); }
+.lap__glow { position: absolute; inset: -14% -12% -10%; pointer-events: none; background: radial-gradient(44% 46% at 58% 42%, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0) 72%), radial-gradient(36% 34% at 78% 26%, rgba(224, 127, 85, .2), rgba(224, 127, 85, 0) 74%), radial-gradient(40% 18% at 50% 92%, rgba(16, 24, 32, .16), rgba(16, 24, 32, 0) 70%); }
+.lap__img { position: relative; display: block; width: 100%; height: auto; filter: drop-shadow(0 30px 34px rgba(16, 24, 32, .22)); }
+.lap__screen { position: absolute; left: 0; top: 0; width: 1000px; height: 625px; transform-origin: 0 0; container-type: inline-size; overflow: hidden; background: #fff; backface-visibility: hidden; }
+.lap__screen .dash { height: 100%; border-radius: 0; }
+.lap__glass { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(120deg, rgba(255, 255, 255, .22) 0%, rgba(255, 255, 255, .06) 30%, rgba(255, 255, 255, 0) 46%); }

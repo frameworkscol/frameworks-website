@@ -282,6 +282,46 @@
     });
   });
 
+  /* ---------- Servicios: el tablero se proyecta en la pantalla del portátil (perspectiva) ----------
+     Se calcula una homografía que lleva el rectángulo del tablero (1000 × 625) a las cuatro
+     esquinas de la pantalla en la foto, y se aplica como matrix3d. */
+  var lapScreen = document.getElementById('lapScreen');
+  if (lapScreen) {
+    var lap = document.getElementById('lap');
+    var quad = lapScreen.dataset.quad.split(' ').map(function (p) { return p.split(',').map(Number); });
+    var SW = 1000, SH = 625;
+    function solve(A, b) {   // eliminación de Gauss para el sistema 8 × 8
+      var n = b.length, i, j, k;
+      for (i = 0; i < n; i++) {
+        var max = i; for (k = i + 1; k < n; k++) if (Math.abs(A[k][i]) > Math.abs(A[max][i])) max = k;
+        var t = A[i]; A[i] = A[max]; A[max] = t; var tb = b[i]; b[i] = b[max]; b[max] = tb;
+        for (k = i + 1; k < n; k++) { var f = A[k][i] / A[i][i]; b[k] -= f * b[i]; for (j = i; j < n; j++) A[k][j] -= f * A[i][j]; }
+      }
+      var x = new Array(n);
+      for (i = n - 1; i >= 0; i--) { var sum = b[i]; for (j = i + 1; j < n; j++) sum -= A[i][j] * x[j]; x[i] = sum / A[i][i]; }
+      return x;
+    }
+    function fitScreen() {
+      var W = lap.clientWidth, H = lap.querySelector('.lap__img').clientHeight;
+      if (!W || !H) return;
+      var src = [[0, 0], [SW, 0], [SW, SH], [0, SH]];
+      var dst = quad.map(function (q) { return [q[0] / 100 * W, q[1] / 100 * H]; });
+      var A = [], b = [];
+      for (var i = 0; i < 4; i++) {
+        var x = src[i][0], y = src[i][1], u = dst[i][0], v = dst[i][1];
+        A.push([x, y, 1, 0, 0, 0, -u * x, -u * y]); b.push(u);
+        A.push([0, 0, 0, x, y, 1, -v * x, -v * y]); b.push(v);
+      }
+      var h = solve(A, b);
+      var m = [h[0], h[3], 0, h[6], h[1], h[4], 0, h[7], 0, 0, 1, 0, h[2], h[5], 0, 1];
+      lapScreen.style.transform = 'matrix3d(' + m.map(function (n) { return n.toFixed(10); }).join(',') + ')';
+    }
+    var lapImg = lap.querySelector('.lap__img');
+    if (lapImg.complete) fitScreen(); else lapImg.addEventListener('load', fitScreen);
+    window.addEventListener('resize', fitScreen);
+    if ('ResizeObserver' in window) new ResizeObserver(fitScreen).observe(lap);
+  }
+
   /* ---------- Servicios: pestañas por categoría ---------- */
   var svcTabs = Array.prototype.slice.call(document.querySelectorAll('.svc2__card'));
   svcTabs.forEach(function (tab, i) {
