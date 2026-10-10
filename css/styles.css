@@ -1624,3 +1624,45 @@ html { scroll-padding-top: 0; }
 @media (max-width: 760px) { .svc2__cards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .svc2__cards { grid-template-columns: 1fr; } .svc2__card { grid-template-columns: auto 1fr auto; grid-template-areas: "ic n go" "ic t go" "ic d go"; } .svc2__card-go { display: block; } }
 .svc2__why b { color: var(--cobre); }
+
+/* ====================================================================
+   Servicios v3 (como la referencia): tarjetas solo con el nombre que se
+   encienden en cobre al pasar el cursor y llevan al detalle de cada área.
+   ==================================================================== */
+.svc2__cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.4vw, 20px); }
+.svc2__cards .svc2__card { position: relative; isolation: isolate; overflow: hidden; display: grid; place-items: center; grid-template-columns: none; grid-template-areas: none; min-height: clamp(96px, 12vh, 124px); padding: 20px 18px; border-radius: 20px; text-align: center; text-decoration: none; color: var(--noche); background: linear-gradient(180deg, #ffffff 0%, #f4efe7 100%); box-shadow: inset 0 0 0 1px rgba(16, 24, 32, .07), inset 0 1px 0 #fff, 0 18px 36px -26px rgba(16, 24, 32, .5); transform: none; transition: transform .45s var(--ease), box-shadow .45s var(--ease), color .3s var(--ease); }
+.svc2__cards .svc2__card::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .45s var(--ease);
+  background: radial-gradient(120% 90% at 18% 0%, #f2a27c 0%, rgba(242, 162, 124, 0) 55%), linear-gradient(135deg, #e07f55 0%, #c65d32 45%, #9c4120 100%); }
+.svc2__cards .svc2__card::after { content: ""; position: absolute; inset: 0; z-index: -1; height: auto; left: 0; right: 0; bottom: auto; border-radius: 0; transform: translateX(-130%); background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, .45) 48%, transparent 66%); }
+.svc2__cards .svc2__card b { position: relative; font-family: var(--font-display); font-size: clamp(16px, 1.35vw, 20px); font-weight: 700; letter-spacing: -.02em; line-height: 1.2; transition: transform .45s var(--ease); }
+.svc2__cards .svc2__card .svc2__card-go { position: absolute; left: 0; right: 0; bottom: 16px; margin: 0; padding: 0; font-family: var(--font-display); font-size: 13px; font-weight: 600; color: #fff; opacity: 0; transform: translateY(8px); transition: opacity .35s var(--ease), transform .45s var(--ease); }
+/* encendida: al pasar el cursor, con el teclado, o la destacada mientras no se señale otra */
+.svc2__cards .svc2__card:is(:hover, :focus-visible),
+.svc2__cards:not(:hover) .svc2__card.is-featured { color: #fff; transform: translateY(-4px); box-shadow: 0 0 0 1px rgba(255, 255, 255, .18) inset, 0 22px 44px -18px rgba(198, 93, 50, .8), 0 0 36px -6px rgba(224, 127, 85, .55); }
+.svc2__cards .svc2__card:is(:hover, :focus-visible)::before,
+.svc2__cards:not(:hover) .svc2__card.is-featured::before { opacity: 1; }
+.svc2__cards .svc2__card:is(:hover, :focus-visible)::after { animation: svc2-shine 1s .05s var(--ease) both; }
+.svc2__cards:not(:hover) .svc2__card.is-featured::after { animation: svc2-shine 1.2s 1s var(--ease) both, svc2-shine-loop 4.5s 2.4s ease-in-out infinite; }
+@keyframes svc2-shine { to { transform: translateX(130%); } }
+@keyframes svc2-shine-loop { 0%, 70% { transform: translateX(-130%); } 100% { transform: translateX(130%); } }
+.svc2__cards .svc2__card:is(:hover, :focus-visible) b,
+.svc2__cards:not(:hover) .svc2__card.is-featured b { transform: translateY(-10px); }
+.svc2__cards .svc2__card:is(:hover, :focus-visible) .svc2__card-go,
+.svc2__cards:not(:hover) .svc2__card.is-featured .svc2__card-go { opacity: 1; transform: none; }
+
+/* detalle de cada área, uno debajo del otro (como la referencia) */
+.svc2__panel { display: grid; margin-top: clamp(20px, 3vw, 36px); scroll-margin-top: 24px; animation: none; }
+.svc2__panel + .svc2__panel { margin-top: clamp(16px, 2vw, 24px); }
+.svc2__panel:nth-of-type(even) { background: linear-gradient(180deg, #faf7f1, #ffffff); }
+.svc2__item { grid-template-columns: 1fr auto; padding: 16px 4px; }
+.svc2__item:hover { transform: none; }
+.svc2__check { width: 26px; height: 26px; border-radius: 50%; background: rgba(198, 93, 50, .12) no-repeat center / 14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C65D32' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E"); box-shadow: inset 0 0 0 1px rgba(198, 93, 50, .3); }
+
+@media (max-width: 900px) { .svc2__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .svc2__cards .svc2__card { min-height: 84px; } .svc2__cards .svc2__card b { font-size: 15.5px; } }
+@media (prefers-reduced-motion: reduce) { .svc2__cards .svc2__card::after { animation: none !important; } }
+.svc2__cards .svc2__card b, .svc2__cards .svc2__card .svc2__card-go { grid-area: auto; }
+.svc2__cards .svc2__card { min-height: clamp(108px, 13vh, 132px); padding-bottom: 26px; }
+.svc2__cards .svc2__card .svc2__card-go { bottom: 14px; }
+.svc2__cards .svc2__card:is(:hover, :focus-visible) b,
+.svc2__cards:not(:hover) .svc2__card.is-featured b { transform: translateY(-12px); }

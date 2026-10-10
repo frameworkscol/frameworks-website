@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..500&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=20261017g">
+  <link rel="stylesheet" href="css/styles.css?v=20261018a">
   <script>
     // Activa la animación de entrada del logo (se omite si el visitante prefiere menos movimiento)
     // Al recargar, empezar siempre desde arriba (sin restaurar scroll ni saltar a #secciones)
@@ -148,8 +148,8 @@
       </div>
     </div>
     <div class="svc2" data-reveal>
-      <div class="svc2__cards" role="tablist" aria-label="Categorías de servicios"><button type="button" class="svc2__card is-on" role="tab" id="svc2-tab-presence" aria-controls="svc2-presence" aria-selected="true"><span class="svc2__card-ic"><svg viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6L7 10z"/><path d="M17 9.5a3.5 3.5 0 0 1 0 5"/></svg></span><span class="svc2__card-n">01</span><b>Digital Presence</b><small>Contenido y campañas que hacen visible tu marca.</small><span class="svc2__card-go">Ver servicios <i>→</i></span></button><button type="button" class="svc2__card" role="tab" id="svc2-tab-web" aria-controls="svc2-web" aria-selected="false"><span class="svc2__card-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.2 2.5 13.8 0 16M12 4c-2.5 2.2-2.5 13.8 0 16"/></svg></span><span class="svc2__card-n">02</span><b>Web &amp; Digital Experiences</b><small>Sitios rápidos que convierten visitas en clientes.</small><span class="svc2__card-go">Ver servicios <i>→</i></span></button><button type="button" class="svc2__card" role="tab" id="svc2-tab-ai" aria-controls="svc2-ai" aria-selected="false"><span class="svc2__card-ic"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="10" rx="3"/><path d="M12 8V5M9.5 13h.01M14.5 13h.01"/></svg></span><span class="svc2__card-n">03</span><b>AI &amp; Automation</b><small>IA y automatizaciones que trabajan por tu equipo.</small><span class="svc2__card-go">Ver servicios <i>→</i></span></button><button type="button" class="svc2__card" role="tab" id="svc2-tab-tools" aria-controls="svc2-tools" aria-selected="false"><span class="svc2__card-ic"><svg viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg></span><span class="svc2__card-n">04</span><b>Business Tools</b><small>CRM, tableros y herramientas a tu medida.</small><span class="svc2__card-go">Ver servicios <i>→</i></span></button></div>
-      <div class="svc2__panel is-on" id="svc2-presence" role="tabpanel" aria-labelledby="svc2-tab-presence">
+      <nav class="svc2__cards" aria-label="Categorías de servicios"><a class="svc2__card" href="#svc2-presence"><b>Digital Presence</b><span class="svc2__card-go">Ver cómo funciona →</span></a><a class="svc2__card" href="#svc2-web"><b>Web &amp; Digital Experiences</b><span class="svc2__card-go">Ver cómo funciona →</span></a><a class="svc2__card is-featured" href="#svc2-ai"><b>AI &amp; Automation</b><span class="svc2__card-go">Ver cómo funciona →</span></a><a class="svc2__card" href="#svc2-tools"><b>Business Tools</b><span class="svc2__card-go">Ver cómo funciona →</span></a></nav>
+      <div class="svc2__panel" id="svc2-presence">
         <div class="svc2__intro">
           <h3 class="svc2__name">Digital Presence<i class="dot">.</i></h3>
           <p>Tu marca visible y consistente en redes, con contenido que la gente sí se detiene a ver.</p>
@@ -157,13 +157,13 @@
           <a class="btn btn--pill btn--small" href="#contacto"><span>Cotizar</span><span class="arr" aria-hidden="true">→</span></a>
         </div>
         <ul class="svc2__list">
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 15l4-4 4 4 3-3 5 5"/><circle cx="15.5" cy="8.5" r="1.5"/></svg></span><span class="svc2__txt"><b>Contenido para redes</b><small>Publicaciones, carruseles y reels con la identidad de tu marca.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Contenido para redes">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg></span><span class="svc2__txt"><b>Videos y fotos de producto con IA</b><small>Piezas de alto impacto creadas con inteligencia artificial.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Videos y fotos de producto con IA">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg></span><span class="svc2__txt"><b>Catálogos y menús digitales</b><small>Fáciles de compartir por WhatsApp o con un código QR.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Catálogos y menús digitales">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l7 4V6L7 10z"/><path d="M17 9.5a3.5 3.5 0 0 1 0 5"/></svg></span><span class="svc2__txt"><b>Piezas para campañas</b><small>Todo lo de una promoción: posts, historias y anuncios.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Piezas para campañas">→</a></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Contenido para redes</b><small>Publicaciones, carruseles y reels con la identidad de tu marca.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Videos y fotos de producto con IA</b><small>Piezas de alto impacto creadas con inteligencia artificial.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Catálogos y menús digitales</b><small>Fáciles de compartir por WhatsApp o con un código QR.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Piezas para campañas</b><small>Todo lo de una promoción: posts, historias y anuncios.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
         </ul>
       </div>
-      <div class="svc2__panel" id="svc2-web" role="tabpanel" aria-labelledby="svc2-tab-web" hidden>
+      <div class="svc2__panel" id="svc2-web">
         <div class="svc2__intro">
           <h3 class="svc2__name">Web &amp; Digital Experiences<i class="dot">.</i></h3>
           <p>Sitios rápidos, adaptados al celular y pensados para que te contacten o te compren.</p>
@@ -171,13 +171,13 @@
           <a class="btn btn--pill btn--small" href="#contacto"><span>Cotizar</span><span class="arr" aria-hidden="true">→</span></a>
         </div>
         <ul class="svc2__list">
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.2 2.5 13.8 0 16M12 4c-2.5 2.2-2.5 13.8 0 16"/></svg></span><span class="svc2__txt"><b>Sitios web corporativos</b><small>Tu empresa en línea, clara, rápida y profesional.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Sitios web corporativos">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/></svg></span><span class="svc2__txt"><b>Landing pages</b><small>Una página enfocada en vender una sola oferta.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Landing pages">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></span><span class="svc2__txt"><b>Portafolios y catálogos web</b><small>Tus productos o proyectos, ordenados y listos para cotizar.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Portafolios y catálogos web">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4c3 0 6 3 6 6l-6 6-4-4z"/><path d="M10 12l-3 1-3 3 4 1M12 14l-1 3-3 3-1-4"/><circle cx="15.5" cy="8.5" r="1.3"/></svg></span><span class="svc2__txt"><b>Páginas para campañas</b><small>Lanzamientos y eventos con formulario de registro.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Páginas para campañas">→</a></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Sitios web corporativos</b><small>Tu empresa en línea, clara, rápida y profesional.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Landing pages</b><small>Una página enfocada en vender una sola oferta.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Portafolios y catálogos web</b><small>Tus productos o proyectos, ordenados y listos para cotizar.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Páginas para campañas</b><small>Lanzamientos y eventos con formulario de registro.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
         </ul>
       </div>
-      <div class="svc2__panel" id="svc2-ai" role="tabpanel" aria-labelledby="svc2-tab-ai" hidden>
+      <div class="svc2__panel" id="svc2-ai">
         <div class="svc2__intro">
           <h3 class="svc2__name">AI &amp; Automation<i class="dot">.</i></h3>
           <p>Menos tareas manuales: la IA y las automatizaciones trabajan por tu equipo, a cualquier hora.</p>
@@ -185,13 +185,13 @@
           <a class="btn btn--pill btn--small" href="#contacto"><span>Cotizar</span><span class="arr" aria-hidden="true">→</span></a>
         </div>
         <ul class="svc2__list">
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="8" width="14" height="10" rx="3"/><path d="M12 8V5M9.5 13h.01M14.5 13h.01"/></svg></span><span class="svc2__txt"><b>Chatbots y agentes de IA</b><small>Responden y realizan tareas 24/7 en tu web o WhatsApp.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Chatbots y agentes de IA">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="12" r="2.2"/><circle cx="6" cy="18" r="2.2"/><path d="M8.2 6H12a3 3 0 0 1 3 3v.8M8.2 18H12a3 3 0 0 0 3-3v-.8"/></svg></span><span class="svc2__txt"><b>Automatización de procesos</b><small>Del pedido a la factura, sin trabajo manual.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Automatización de procesos">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4v8a6 6 0 0 0 12 0V4h-4v8a2 2 0 0 1-4 0V4z"/><path d="M6 8h4M14 8h4"/></svg></span><span class="svc2__txt"><b>Captura de leads</b><small>Cada contacto registrado, clasificado y con seguimiento.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Captura de leads">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.5A2.5 2.5 0 0 1 7.5 4h9A2.5 2.5 0 0 1 19 6.5v6a2.5 2.5 0 0 1-2.5 2.5H11l-4 3.5V15h0A2.5 2.5 0 0 1 5 12.5z"/></svg></span><span class="svc2__txt"><b>Asistentes para tu equipo</b><small>Redactan, resumen y encuentran información por ti.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Asistentes para tu equipo">→</a></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Chatbots y agentes de IA</b><small>Responden y realizan tareas 24/7 en tu web o WhatsApp.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Automatización de procesos</b><small>Del pedido a la factura, sin trabajo manual.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Captura de leads</b><small>Cada contacto registrado, clasificado y con seguimiento.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Asistentes para tu equipo</b><small>Redactan, resumen y encuentran información por ti.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
         </ul>
       </div>
-      <div class="svc2__panel" id="svc2-tools" role="tabpanel" aria-labelledby="svc2-tab-tools" hidden>
+      <div class="svc2__panel" id="svc2-tools">
         <div class="svc2__intro">
           <h3 class="svc2__name">Business Tools<i class="dot">.</i></h3>
           <p>Herramientas a la medida de tu negocio para ordenar la información y decidir con datos.</p>
@@ -199,10 +199,10 @@
           <a class="btn btn--pill btn--small" href="#contacto"><span>Cotizar</span><span class="arr" aria-hidden="true">→</span></a>
         </div>
         <ul class="svc2__list">
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="10" r="2.3"/><path d="M15.5 14.5A4.5 4.5 0 0 1 21 19"/></svg></span><span class="svc2__txt"><b>CRM a tu medida</b><small>Clientes, oportunidades y seguimientos en un solo lugar.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: CRM a tu medida">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg></span><span class="svc2__txt"><b>Dashboards</b><small>Tus números clave, actualizados solos.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Dashboards">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20z"/><path d="M14 3.5V8h4M10 12h5M10 15.5h5"/></svg></span><span class="svc2__txt"><b>Cotizadores y documentos</b><small>Precios, propuestas y contratos al instante.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Cotizadores y documentos">→</a></li>
-          <li class="svc2__item"><span class="svc2__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5a4 4 0 0 0 4.9 4.9L11 18.8a2.1 2.1 0 0 1-3-3L16.4 7.4"/></svg></span><span class="svc2__txt"><b>Herramientas internas</b><small>Inventario, turnos o solicitudes, con no-code y low-code.</small></span><a class="svc2__go" href="#contacto" aria-label="Cotizar: Herramientas internas">→</a></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>CRM a tu medida</b><small>Clientes, oportunidades y seguimientos en un solo lugar.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Dashboards</b><small>Tus números clave, actualizados solos.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Cotizadores y documentos</b><small>Precios, propuestas y contratos al instante.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
+          <li class="svc2__item"><span class="svc2__txt"><b>Herramientas internas</b><small>Inventario, turnos o solicitudes, con no-code y low-code.</small></span><span class="svc2__check" aria-hidden="true"></span></li>
         </ul>
       </div>
     </div>
@@ -691,8 +691,8 @@
   </div>
 </footer>
 
-<script src="js/i18n-en.js?v=20261017g" defer></script>
-<script src="js/i18n.js?v=20261017g" defer></script>
-<script src="js/main.js?v=20261017g" defer></script>
+<script src="js/i18n-en.js?v=20261018a" defer></script>
+<script src="js/i18n.js?v=20261018a" defer></script>
+<script src="js/main.js?v=20261018a" defer></script>
 </body>
 </html>
