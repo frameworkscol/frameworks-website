@@ -1679,3 +1679,24 @@ html { scroll-padding-top: 0; }
 /* Servicios ocupa la pantalla completa con el contenido centrado (sin hueco grande abajo) */
 #servicios { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-block: clamp(28px, 4.5vh, 52px); }
 #servicios > .container { width: 100%; }
+
+/* ---------- Servicios · catálogo ampliado (frase principal, resultado y aliado) ---------- */
+.svc2__intro { gap: 16px; }
+.svc2__intro .svc2__lead { margin: -4px 0 0; font-family: var(--font-display); font-size: clamp(21px, 1.7vw, 25px); font-weight: 600; line-height: 1.25; letter-spacing: -.02em; color: var(--cobre); }
+.svc2__chips li::before { content: none; }
+.svc2__chips li { background: transparent; box-shadow: inset 0 0 0 1px var(--arena); color: var(--pizarra); letter-spacing: .01em; }
+.svc2__item { align-items: start; padding: 18px 4px; }
+.svc2__item .svc2__check { margin-top: 2px; }
+.svc2__txt { gap: 5px; }
+.svc2__txt small { text-align: left; hyphens: none; }
+.svc2__res { font-size: 14.5px; line-height: 1.4; color: var(--noche); text-align: left; hyphens: none; }
+.svc2__res em { font-style: normal; font-family: var(--font-display); font-weight: 600; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--cobre-hondo); margin-right: 4px; }
+.svc2__partner { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; background: rgba(198, 93, 50, .1); font-family: var(--font-display); font-size: 12px; font-weight: 600; color: var(--cobre-hondo); }
+.svc2__partner::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--cobre); }
+@media (min-width: 900px) { .svc2__intro { position: sticky; top: 24px; align-self: start; } }
+@media (max-width: 560px) {
+  .svc2__intro .svc2__lead { font-size: 20px; }
+  .svc2__txt b { font-size: 17px; }
+  .svc2__txt small { font-size: 14.5px; }
+  .svc2__res { font-size: 13.5px; }
+}
