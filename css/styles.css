@@ -1568,3 +1568,11 @@ h2:not([data-split]) { padding-bottom: .12em; }
 .svc2__photo { margin: 0; border-radius: 26px; overflow: hidden; box-shadow: 0 0 0 1px rgba(16, 24, 32, .05), 0 40px 80px -48px rgba(16, 24, 32, .55); }
 .svc2__photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 1.2s var(--ease); }
 .svc2__visual:hover .svc2__photo img { transform: scale(1.03); }
+
+/* Inicio más compacto: sin etiquetas ni enlace secundario, el bloque queda centrado y sin huecos */
+.hero__in { gap: clamp(20px, 2.4vw, 32px); }
+.hero__kicker { margin-top: 0; }
+.hero__ctas { margin-top: clamp(4px, .8vw, 12px); }
+@media (min-width: 901px) {
+  .hero { min-height: min(84svh, 860px); }
+}

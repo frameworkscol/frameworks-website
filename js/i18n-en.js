@@ -400,6 +400,7 @@ window.FW_EN = {
 "Tu negocio puede llegar más lejos cuando todo funciona mejor.": "Your business can go further when everything works better.",
 "Creamos soluciones digitales que optimizan procesos, automatizan tareas y fortalecen tu presencia en línea. Menos trabajo repetitivo y más oportunidades para crecer.": "We build digital solutions that streamline processes, automate tasks and strengthen your online presence. Less repetitive work and more opportunities to grow.",
 "Dueña de una tienda revisando su negocio en el portátil": "Store owner checking on her business on a laptop",
+"Marketing digital · Sitios web · Automatización": "Digital marketing · Websites · Automation",
 "Lead de prueba": "Test lead",
 "Quiere cotizar": "Wants a quote",
 "Solo pregunta": "Just asking",
