@@ -1676,3 +1676,6 @@ html { scroll-padding-top: 0; }
 .svc2__cards .svc2__card::after { display: none; animation: none !important; }
 .svc2__cards .svc2__card:is(:hover, :focus-visible),
 .svc2__cards:not(:hover) .svc2__card.is-featured { box-shadow: 0 14px 28px -20px rgba(16, 24, 32, .45); }
+/* Servicios ocupa la pantalla completa con el contenido centrado (sin hueco grande abajo) */
+#servicios { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-block: clamp(28px, 4.5vh, 52px); }
+#servicios > .container { width: 100%; }
