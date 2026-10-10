@@ -1691,8 +1691,6 @@ html { scroll-padding-top: 0; }
 .svc2__txt small { text-align: left; hyphens: none; }
 .svc2__res { font-size: 14.5px; line-height: 1.4; color: var(--noche); text-align: left; hyphens: none; }
 .svc2__res em { font-style: normal; font-family: var(--font-display); font-weight: 600; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--cobre-hondo); margin-right: 4px; }
-.svc2__partner { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; background: rgba(198, 93, 50, .1); font-family: var(--font-display); font-size: 12px; font-weight: 600; color: var(--cobre-hondo); }
-.svc2__partner::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--cobre); }
 @media (min-width: 900px) { .svc2__intro { position: sticky; top: 24px; align-self: start; } }
 @media (max-width: 560px) {
   .svc2__intro .svc2__lead { font-size: 20px; }
