@@ -1576,3 +1576,4 @@ h2:not([data-split]) { padding-bottom: .12em; }
 @media (min-width: 901px) {
   .hero { min-height: min(84svh, 860px); }
 }
+.svc2__why .svc2__hl { color: var(--cobre); font-weight: 700; }

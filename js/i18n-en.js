@@ -407,6 +407,8 @@ window.FW_EN = {
 "Lo que hacemos": "What we do",
 "Automatización · Sitios web · Marketing digital": "Automation · Websites · Digital marketing",
 "IA & automatización": "AI & automation",
+"Creamos soluciones digitales que optimizan procesos, automatizan tareas y fortalecen tu presencia en línea.": "We build digital solutions that streamline processes, automate tasks and strengthen your online presence.",
+"Menos trabajo repetitivo y más oportunidades para crecer.": "Less repetitive work and more opportunities to grow.",
 "Lead de prueba": "Test lead",
 "Quiere cotizar": "Wants a quote",
 "Solo pregunta": "Just asking",
