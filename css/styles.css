@@ -1670,3 +1670,9 @@ html { scroll-padding-top: 0; }
 .js .svc2__panel { display: none; }
 .js .svc2__panel.is-open { display: grid; margin-top: clamp(16px, 2vw, 24px); animation: svc2-open .55s var(--ease) both; }
 @keyframes svc2-open { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Tarjetas de servicios: color cobre plano del logo (#C65D32), sin brillo ni resplandor */
+.svc2__cards .svc2__card::before { background: var(--cobre); }
+.svc2__cards .svc2__card::after { display: none; animation: none !important; }
+.svc2__cards .svc2__card:is(:hover, :focus-visible),
+.svc2__cards:not(:hover) .svc2__card.is-featured { box-shadow: 0 14px 28px -20px rgba(16, 24, 32, .45); }
