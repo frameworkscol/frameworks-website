@@ -322,6 +322,29 @@
     if ('ResizeObserver' in window) new ResizeObserver(fitScreen).observe(lap);
   }
 
+  /* ---------- Servicios: el detalle de cada área se abre al hacer clic en su tarjeta ----------
+     Empiezan cerrados; al elegir una tarjeta se abre solo esa área, debajo de las tarjetas,
+     y la página baja hasta ella. Un segundo clic en la misma tarjeta la cierra. */
+  var svcCards = Array.prototype.slice.call(document.querySelectorAll('.svc2__card'));
+  var svcPanels = Array.prototype.slice.call(document.querySelectorAll('.svc2__panel'));
+  svcCards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      var panel = document.querySelector(card.getAttribute('href'));
+      if (!panel) return;
+      e.preventDefault();
+      var opening = !panel.classList.contains('is-open');
+      svcPanels.forEach(function (p) { p.classList.toggle('is-open', p === panel && opening); });
+      svcCards.forEach(function (c) {
+        c.classList.toggle('is-featured', c === card && opening);
+        c.setAttribute('aria-expanded', String(c === card && opening));
+      });
+      if (opening) {
+        var nav = document.querySelector('.svc2__cards');
+        window.scrollTo({ top: nav.getBoundingClientRect().top + window.scrollY - 24, behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    });
+  });
+
   /* ---------- Casos: galería horizontal con arrastre, botones y progreso ---------- */
   var cases = document.getElementById('cases');
   if (cases) {
