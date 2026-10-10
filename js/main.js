@@ -325,6 +325,15 @@
   /* ---------- Servicios: el detalle de cada área se abre al hacer clic en su tarjeta ----------
      Empiezan cerrados; al elegir una tarjeta se abre solo esa área, debajo de las tarjetas,
      y la página baja hasta ella. Un segundo clic en la misma tarjeta la cierra. */
+  // Cada servicio muestra su descripción solo al hacer clic en el nombre
+  document.querySelectorAll('.svc2__q').forEach(function (q) {
+    q.addEventListener('click', function () {
+      var item = q.closest('.svc2__item');
+      var open = !item.classList.contains('is-open');
+      item.classList.toggle('is-open', open);
+      q.setAttribute('aria-expanded', String(open));
+    });
+  });
   var svcCards = Array.prototype.slice.call(document.querySelectorAll('.svc2__card'));
   var svcPanels = Array.prototype.slice.call(document.querySelectorAll('.svc2__panel'));
   svcCards.forEach(function (card) {
