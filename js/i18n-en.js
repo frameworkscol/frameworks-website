@@ -406,6 +406,7 @@ window.FW_EN = {
 "IA y automatización": "AI & automation",
 "Lo que hacemos": "What we do",
 "Automatización · Sitios web · Marketing digital": "Automation · Websites · Digital marketing",
+"IA & automatización": "AI & automation",
 "Lead de prueba": "Test lead",
 "Quiere cotizar": "Wants a quote",
 "Solo pregunta": "Just asking",
